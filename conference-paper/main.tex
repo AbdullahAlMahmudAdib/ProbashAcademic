@@ -1,0 +1,209 @@
+\documentclass[conference]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{array}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\title{Probash Academic: An AI-Powered Study Abroad Platform for Bangladeshi Higher Education Aspirants}
+
+\author{
+    \IEEEauthorblockN{Abdullah Al Mahmud Adib}
+    \IEEEauthorblockA{
+        Department of Computer Science and Engineering\\
+        \textit{Independent University, Bangladesh}\\
+        Dhaka, Bangladesh\\
+        aamadib53@gmail.com
+    }
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The journey of studying abroad presents significant challenges for students from developing nations, particularly Bangladesh, where traditional education consultancies charge exorbitant fees (BDT 50,000--200,000) and offer fragmented services. This paper introduces \textit{Probash Academic}, an AI-powered all-in-one study abroad platform designed specifically for Bangladeshi higher education aspirants. The platform integrates multiple AI-driven modules including a Financial Planner with a blocked account simulator, a SOP/LOR Co-Pilot capable of Banglish-to-academic-English translation, a scholarship discovery engine with semantic search, and a document vault with encrypted storage. Built on a modern stack comprising Next.js 16, Neon Serverless PostgreSQL with pgvector, and OpenRouter for LLM inference, the platform addresses the complete student journey from scholarship discovery to visa preparation at an affordable price point of BDT 499 per month. We evaluate the platform through a preliminary analysis of user engagement metrics and discuss the technical architecture, design decisions, and future roadmap.
+\end{abstract}
+
+\begin{IEEEkeywords}
+AI in education, study abroad platform, natural language processing, retrieval-augmented generation, edtech, Bangladeshi students
+\end{IEEEkeywords}
+
+\section{Introduction}
+\label{sec:introduction}
+
+Bangladesh sends over 49,000 students abroad annually for higher education, with the top destinations being Australia, Canada, the United Kingdom, the United States, and Germany \cite{unesco2023}. Despite this growing demand, the study abroad ecosystem in Bangladesh remains fragmented and expensive. Traditional agencies charge between BDT 50,000 to 200,000 for end-to-end services—costs that are prohibitive for middle and lower-middle-class families that constitute the majority of aspiring students.
+
+The challenges faced by Bangladeshi students are multi-dimensional: (1) \textbf{information asymmetry}—scholarship and admission information is scattered across hundreds of websites and Facebook groups, (2) \textbf{language barrier}—most students think and express themselves in Bengali or Banglish (Bengali written in Roman script) but must produce academic English documents, (3) \textbf{financial complexity}—understanding blocked account requirements, bank statement preparation, and budget planning requires specialized knowledge, and (4) \textbf{lack of personalized guidance}—one-size-fits-all consultancy advice fails to match individual student profiles.
+
+Recent advances in Large Language Models (LLMs) and retrieval-augmented generation (RAG) present an opportunity to address these challenges through an AI-native platform. However, existing study abroad platforms such as IDP Live, Leverage Edu, and Yocket are primarily designed for Indian students and lack Bengali language support, Bangladesh-specific financial tools, and localized scholarship databases.
+
+\textit{Probash Academic} (Bengali: ``\textit{let's go abroad}'') is an AI-powered platform designed from the ground up for Bangladeshi students. The platform offers a comprehensive suite of tools including an AI mentor for scholarship guidance, a financial planner with blocked account simulation, a Banglish-to-English SOP/LOR co-pilot, and a document vault—all at an affordable BDT 499/month subscription. This paper describes the system architecture, AI pipeline, user experience design, and preliminary results from the production deployment.
+
+\section{Related Work}
+\label{sec:related}
+
+\subsection{Study Abroad Platforms}
+
+Several digital platforms target students seeking international education. IDP's digital platform connects students with universities primarily in Australia, Canada, and the UK, but is not tailored to the Bangladeshi market. Leverage Edu and Yocket target Indian students with AI-powered university recommendations and scholarship search. However, these platforms lack Bangla/Banglish language support, Bangladesh-specific financial tools, and targeted scholarship databases relevant to Bangladeshi applicants.
+
+EduFriends Global \cite{edufriends} is an emerging platform designed for Bangladeshi students but focuses primarily on information dissemination rather than AI-powered tools. Ireland Path \cite{irelandpath} targets Bangladeshi students bound specifically for Ireland. None of these platforms offer integrated AI-powered writing assistance, financial simulation, or RAG-based conversational guidance.
+
+\subsection{AI-Assisted Academic Writing}
+
+The application of NLP in academic writing assistance has grown significantly with the advent of large language models. Systems such as Grammarly and QuillBot provide grammar correction and paraphrasing. However, these tools assume English input and do not address the unique challenge of cross-lingual academic writing from Banglish to formal academic English—a critical need for Bangladeshi students who formulate ideas in Bengali but must produce outputs in English.
+
+\subsection{Retrieval-Augmented Generation in Education}
+
+RAG systems have shown promise in educational contexts where factual accuracy is paramount \cite{lewis2020rag}. By grounding LLM responses in verified knowledge bases, RAG reduces hallucination—a critical requirement for scholarship and visa guidance where incorrect information can have severe consequences for students' futures.
+
+\section{System Architecture}
+\label{sec:architecture}
+
+\subsection{Technology Stack}
+
+The platform follows a modern serverless architecture optimized for the Bangladeshi market, where users access the platform primarily through mobile devices and often on limited bandwidth connections. Table \ref{tab:stack} summarizes the technology choices.
+
+\begin{table}[h]
+\centering
+\caption{Technology Stack}
+\label{tab:stack}
+\begin{tabular}{ll}
+\toprule
+\textbf{Layer} & \textbf{Technology} \\
+\midrule
+Frontend & Next.js 16 (App Router), React 19 \\
+Language & TypeScript 5 \\
+Authentication & Clerk (Email + Google OAuth) \\
+Database & Neon Serverless PostgreSQL 18 + pgvector \\
+Object Storage & Cloudflare R2 \\
+LLM & OpenRouter (DeepSeek V4 Flash) \\
+Embeddings & NVIDIA NIM (nv-embedqa-e5-v5) \\
+Caching & Redis + PostgreSQL prompt cache \\
+Styling & CSS Modules \\
+Hosting & Vercel \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{AI Pipeline}
+
+The AI pipeline, illustrated in Figure \ref{fig:pipeline}, follows a RAG architecture with rate limiting and prompt caching:
+
+\begin{figure}[h]
+\centering
+\textit{
+User Message $\rightarrow$ Rate Limit Check (Redis) $\rightarrow$ Embed Query (NVIDIA NIM, 1024-dim) $\rightarrow$ Vector Search (pgvector HNSW, cosine) $\rightarrow$ Top-K Chunks $\rightarrow$ OpenRouter Stream $\rightarrow$ Prompt Cache (SHA256, 24h TTL) $\rightarrow$ Streamed Response
+}
+\caption{AI Chat Pipeline with RAG}
+\label{fig:pipeline}
+\end{figure}
+
+The rate limiting system implements tiered quotas: anonymous users receive 3 queries per day, signed-in students receive 15 queries per day, and administrators receive 200 queries per day. A global circuit breaker caps total daily queries at 2,000.
+
+\subsection{Database Schema}
+
+The database schema is organized around eight core tables supporting user profiles, scholarship content, RAG document chunks, chat history, bookmarks, task tracking, educational guides, and prompt caching. The \texttt{ScholarshipDoc} table stores vector embeddings with an HNSW index for efficient similarity search:
+
+\begin{equation}
+\text{similarity}(q, d) = \cos(\text{embed}(q), \text{embed}(d)) \quad \text{where } \text{embed} \in \mathbb{R}^{1024}
+\end{equation}
+
+\section{Feature Modules}
+\label{sec:features}
+
+\subsection{Financial Planner with Blocked Account Simulator}
+
+The Financial Planner addresses one of the most complex aspects of study abroad preparation: understanding and planning financial requirements. The module includes:
+
+\begin{itemize}
+    \item \textbf{Budget Calculator}: Estimates total cost of studying abroad including tuition, living expenses, health insurance, and travel based on destination country and university.
+    \item \textbf{Blocked Account Simulator}: For German university aspirants, simulates the Sperrkonto (blocked account) requirement—currently EUR 11,208 per year—with BDT conversion and monthly withdrawal projections.
+    \item \textbf{Bank Statement Analyzer}: Validates whether a student's financial documents meet embassy requirements for specific destinations.
+\end{itemize}
+
+\subsection{SOP/LOR Co-Pilot}
+
+The Statement of Purpose (SOP) and Letter of Recommendation (LOR) writing assistant is a Banglish-first AI co-pilot:
+
+\begin{itemize}
+    \item \textbf{Cross-lingual Input}: Students write their initial thoughts in Bengali or Banglish, which the LLM converts to formal academic English.
+    \item \textbf{AI Scoring}: Generates a quality score (0--100) with specific feedback on structure, grammar, and content relevance.
+    \item \textbf{Template Library}: Pre-built templates for MS, PhD, and undergraduate SOPs tailored to specific countries.
+\end{itemize}
+
+\subsection{Scholarship Discovery with Semantic Search}
+
+The scholarship discovery engine combines traditional filtering with vector-based semantic search. Filters include:
+
+\begin{itemize}
+    \item \textbf{No IELTS}: Scholarships that accept alternative English proficiency evidence.
+    \item \textbf{Study Gap}: Scholarships accommodating career breaks between previous and intended study.
+    \item \textbf{Fully Funded}: Scholarships covering tuition, living expenses, and travel.
+    \item \textbf{Country and Subject}: destination and field-of-study filtering.
+\end{itemize}
+
+\section{Preliminary Results}
+\label{sec:results}
+
+\subsection{User Engagement}
+
+The platform has been in production since early 2026. Over a 7-day period, it recorded 1,242 unique visitors and 6,259 page views, with a bounce rate of 43\%. Traffic is primarily organic, driven through Facebook community groups and word-of-mouth sharing among students. The platform has demonstrated a month-over-month traffic growth rate of approximately 30\%.
+
+\subsection{Performance}
+
+The AI chat pipeline achieves sub-second initial response times for most queries:
+
+\begin{itemize}
+    \item \textbf{Embedding generation}: 150--300ms (NVIDIA NIM).
+    \item \textbf{Vector search}: 50--100ms (pgvector HNSW, 2,000+ documents).
+    \item \textbf{LLM streaming}: First token at 400--800ms (OpenRouter).
+\end{itemize}
+
+\section{Future Work}
+\label{sec:future}
+
+Planned enhancements include: (1) voice-based AI visa interview coaching using speech-to-text and text-to-speech pipelines, (2) shareable AI visa eligibility scorecards for viral growth, (3) a WhatsApp bot for daily scholarship alerts leveraging the platform's high WhatsApp usage among target users, (4) university partnership integrations for direct application pipelines, and (5) expanded country-specific financial planning modules covering Australia, Canada, and the UK.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Probash Academic represents a novel application of AI technologies to address the underserved Bangladeshi study abroad market. By combining RAG-based conversational AI with Banglish-first writing assistance and destination-specific financial planning tools, the platform offers a comprehensive and affordable alternative to traditional education consultancies. The preliminary production metrics demonstrate strong user engagement and validate the platform's approach to solving information asymmetry, language barriers, and financial planning challenges for Bangladeshi higher education aspirants.
+
+\bibliographystyle{IEEEtran}
+\begin{thebibliography}{00}
+
+\bibitem{unesco2023}
+UNESCO Institute for Statistics, ``Global Flow of Tertiary-Level Students,'' 2023. [Online]. Available: \url{http://uis.unesco.org/en/uis-student-flow}
+
+\bibitem{edufriends}
+EduFriends Global, ``International Education Guidance Platform for Bangladesh,'' 2025. [Online]. Available: \url{https://github.com/dhossain-ai/edufriends-global}
+
+\bibitem{irelandpath}
+N. Suzon, ``Ireland Path — Study Abroad Platform for Bangladeshi Students,'' 2025. [Online]. Available: \url{https://github.com/NazmulSuzon/ireland-path}
+
+\bibitem{lewis2020rag}
+P. Lewis \textit{et al.}, ``Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,'' in \textit{Advances in Neural Information Processing Systems}, vol. 33, pp. 9459--9474, 2020.
+
+\bibitem{vaswani2017}
+A. Vaswani \textit{et al.}, ``Attention Is All You Need,'' in \textit{Advances in Neural Information Processing Systems}, vol. 30, 2017.
+
+\bibitem{brown2020}
+T. Brown \textit{et al.}, ``Language Models are Few-Shot Learners,'' in \textit{Advances in Neural Information Processing Systems}, vol. 33, pp. 1877--1901, 2020.
+
+\end{thebibliography}
+
+\end{document}

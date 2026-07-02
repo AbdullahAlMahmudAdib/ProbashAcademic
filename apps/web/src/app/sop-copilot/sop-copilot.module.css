@@ -1,0 +1,404 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 16px 8vw 64px;
+  font-family: var(--font-body);
+  color: var(--ink-900);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────────────── */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 24px;
+}
+
+.kicker {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal-500);
+  margin: 0;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ink-900);
+  margin: 0;
+  line-height: 1.15;
+}
+
+.heroSubtitle {
+  font-size: 15px;
+  color: var(--ink-700);
+  margin: 0;
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+.modeTabs {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.modeTab {
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: 1.5px solid var(--sand-200);
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-700);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.modeTab:hover {
+  border-color: var(--teal-500);
+  color: var(--teal-700);
+}
+
+.modeTabActive {
+  background: var(--teal-500);
+  border-color: var(--teal-500);
+  color: #fff;
+}
+
+.modeTabActive:hover {
+  color: #fff;
+  border-color: var(--teal-700);
+  background: var(--teal-700);
+}
+
+/* ── Panels ───────────────────────────────────────────────────────────────── */
+
+.inputPanel,
+.outputPanel {
+  background: var(--sand-100);
+  border: 1px solid var(--sand-200);
+  border-radius: 18px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.panelTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink-900);
+  margin: 0;
+}
+
+/* ── Form fields ─────────────────────────────────────────────────────────── */
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fieldRow {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.fieldRow .field {
+  flex: 1 1 160px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-700);
+}
+
+.select,
+.input,
+.textarea {
+  border: 1.5px solid var(--sand-200);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: var(--font-body);
+  color: var(--ink-900);
+  background: #fff;
+  transition: border-color 0.15s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.select:focus,
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--teal-500);
+}
+
+.textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.wordCount {
+  font-size: 12px;
+  color: var(--ink-500);
+  margin: 0;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+
+.generateBtn {
+  align-self: flex-start;
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: none;
+  background: var(--teal-500);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.generateBtn:hover:not(:disabled) {
+  background: var(--teal-700);
+}
+
+.generateBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.errorMsg {
+  font-size: 13px;
+  color: var(--coral-700);
+  background: rgba(240, 100, 80, 0.08);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0;
+}
+
+/* ── Output Panel ────────────────────────────────────────────────────────── */
+
+.outputHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.scoreBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.scoreBadgeLabel {
+  font-weight: 500;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.scoreBadgeValue {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.scoreBadgeGreen {
+  background: rgba(15, 143, 141, 0.12);
+  color: var(--teal-700);
+}
+
+.scoreBadgeYellow {
+  background: rgba(240, 180, 60, 0.15);
+  color: #a06b00;
+}
+
+.scoreBadgeRed {
+  background: rgba(240, 100, 80, 0.12);
+  color: var(--coral-700);
+}
+
+.outputText {
+  background: #fff;
+  border: 1.5px solid var(--sand-200);
+  border-radius: 12px;
+  padding: 20px 24px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--ink-900);
+  white-space: pre-wrap;
+}
+
+.scoreBreakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.scoreBreakdownTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-700);
+  margin: 0;
+}
+
+.scoreBarRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.scoreBarLabel {
+  font-size: 12px;
+  color: var(--ink-700);
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.scoreBarTrack {
+  flex: 1;
+  height: 6px;
+  background: var(--sand-200);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.scoreBarFill {
+  height: 100%;
+  background: var(--teal-500);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.scoreBarValue {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-700);
+  width: 28px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.outputWordCount {
+  font-size: 12px;
+  color: var(--ink-500);
+  margin: 0;
+}
+
+.outputActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.copyBtn {
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1.5px solid var(--teal-500);
+  background: transparent;
+  color: var(--teal-700);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.copyBtn:hover {
+  background: var(--teal-500);
+  color: #fff;
+}
+
+.regenerateBtn {
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1.5px solid var(--sand-200);
+  background: transparent;
+  color: var(--ink-700);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.regenerateBtn:hover:not(:disabled) {
+  border-color: var(--teal-500);
+  color: var(--teal-700);
+}
+
+.regenerateBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 720px) {
+  .page {
+    padding: 12px 4vw 48px;
+  }
+
+  .heroTitle {
+    font-size: 1.5rem;
+  }
+
+  .inputPanel,
+  .outputPanel {
+    padding: 20px 18px;
+  }
+
+  .fieldRow {
+    flex-direction: column;
+  }
+
+  .fieldRow .field {
+    flex: 1 1 auto;
+  }
+
+  .generateBtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .outputActions {
+    flex-direction: column;
+  }
+
+  .copyBtn,
+  .regenerateBtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .outputHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

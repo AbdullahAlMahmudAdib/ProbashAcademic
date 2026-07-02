@@ -1,0 +1,442 @@
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 8vw 64px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.page::before,
+.page::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.page::before {
+  top: -160px;
+  right: -120px;
+  background: radial-gradient(circle, rgba(15, 143, 141, 0.6), rgba(15, 143, 141, 0));
+}
+
+.page::after {
+  bottom: -200px;
+  left: -140px;
+  background: radial-gradient(circle, rgba(240, 138, 104, 0.55), rgba(240, 138, 104, 0));
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+/* ── Hero ──────────────────────────────────────────────────────────────── */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 600px;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal-700);
+}
+
+.hero h1 {
+  font-family: var(--font-display), var(--font-bengali), sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.8px;
+  color: var(--ink-900);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-700);
+  margin: 0;
+}
+
+/* ── Upload Zone ───────────────────────────────────────────────────────── */
+
+.uploadSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 24px;
+  background: #ffffff;
+  border: 1px solid var(--sand-200);
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(15, 34, 52, 0.04);
+}
+
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 36px 24px;
+  border: 2px dashed var(--sand-200);
+  border-radius: 14px;
+  background: var(--sand-100);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  text-align: center;
+}
+
+.dropzone:hover,
+.dropzoneDrag {
+  border-color: var(--teal-500);
+  background: rgba(15, 143, 141, 0.04);
+}
+
+.dropzoneIcon {
+  font-size: 32px;
+  line-height: 1;
+  color: var(--teal-500);
+}
+
+.dropzoneText {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-700);
+  margin: 0;
+}
+
+.dropzoneOr {
+  font-size: 12px;
+  color: var(--ink-500);
+  margin: 0;
+}
+
+.browseBtn {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--teal-700);
+  background: rgba(15, 143, 141, 0.08);
+  border: 1px solid rgba(15, 143, 141, 0.2);
+  border-radius: 8px;
+  padding: 7px 16px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.browseBtn:hover {
+  background: rgba(15, 143, 141, 0.14);
+}
+
+.acceptedHint {
+  font-size: 11.5px;
+  color: var(--ink-500);
+  margin: 0;
+}
+
+.fileInput {
+  display: none;
+}
+
+/* ── Upload Progress ───────────────────────────────────────────────────── */
+
+.progressWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.progressLabel {
+  font-size: 12px;
+  color: var(--ink-700);
+  font-weight: 500;
+}
+
+.progressTrack {
+  width: 100%;
+  height: 6px;
+  background: var(--sand-200);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--teal-500), var(--teal-700));
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.uploadError {
+  font-size: 12px;
+  color: var(--coral-500);
+  font-weight: 500;
+  margin: 0;
+}
+
+.uploadSuccess {
+  font-size: 12px;
+  color: var(--teal-700);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ── Filter Chips ──────────────────────────────────────────────────────── */
+
+.filterRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filterChip {
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-500);
+  background: #ffffff;
+  border: 1px solid var(--sand-200);
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filterChip:hover {
+  border-color: var(--teal-500);
+  color: var(--teal-700);
+}
+
+.filterChipActive {
+  background: var(--teal-500);
+  color: #ffffff;
+  border-color: var(--teal-500);
+}
+
+.filterChipActive:hover {
+  background: var(--teal-700);
+  border-color: var(--teal-700);
+  color: #ffffff;
+}
+
+/* ── Document Grid ─────────────────────────────────────────────────────── */
+
+.docGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+
+.docCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid var(--sand-200);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(15, 34, 52, 0.04);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.docCard:hover {
+  border-color: rgba(15, 143, 141, 0.3);
+  box-shadow: 0 4px 16px rgba(15, 34, 52, 0.08);
+}
+
+.docCardTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.docIcon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 18px;
+  background: rgba(15, 143, 141, 0.08);
+  color: var(--teal-700);
+}
+
+.docInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.docName {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink-900);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.docMeta {
+  font-size: 11.5px;
+  color: var(--ink-500);
+  margin: 2px 0 0;
+}
+
+.docCategorySelect {
+  font: inherit;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--teal-700);
+  background: rgba(15, 143, 141, 0.06);
+  border: 1px solid rgba(15, 143, 141, 0.15);
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  outline: none;
+}
+
+.docCategorySelect:focus {
+  border-color: var(--teal-500);
+}
+
+.docActions {
+  display: flex;
+  gap: 8px;
+}
+
+.docBtn {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: none;
+}
+
+.docDownload {
+  color: var(--teal-700);
+  background: rgba(15, 143, 141, 0.08);
+  border: 1px solid rgba(15, 143, 141, 0.18);
+}
+
+.docDownload:hover {
+  background: rgba(15, 143, 141, 0.15);
+}
+
+.docDelete {
+  color: var(--coral-500);
+  background: rgba(240, 138, 104, 0.06);
+  border: 1px solid rgba(240, 138, 104, 0.18);
+}
+
+.docDelete:hover {
+  background: rgba(240, 138, 104, 0.12);
+}
+
+/* ── Empty State ───────────────────────────────────────────────────────── */
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 36px;
+  opacity: 0.4;
+}
+
+.emptyState p {
+  font-size: 14px;
+  color: var(--ink-500);
+  margin: 0;
+}
+
+/* ── Storage Info Bar ──────────────────────────────────────────────────── */
+
+.storageBar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 18px;
+  background: #ffffff;
+  border: 1px solid var(--sand-200);
+  border-radius: 12px;
+}
+
+.storageText {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--ink-500);
+  margin: 0;
+}
+
+.storageTrack {
+  width: 100%;
+  height: 5px;
+  background: var(--sand-200);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.storageFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--teal-500), var(--teal-700));
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+
+@media (max-width: 720px) {
+  .page {
+    padding: 16px 5vw 64px;
+  }
+
+  .docGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dropzone {
+    padding: 28px 16px;
+  }
+
+  .filterRow {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+  }
+
+  .filterChip {
+    flex-shrink: 0;
+  }
+
+  .uploadSection {
+    padding: 16px;
+  }
+}
