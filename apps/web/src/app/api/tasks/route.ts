@@ -14,7 +14,7 @@ export async function GET() {
   if (!auth) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const rows = await sql`
-    SELECT id, title, due_date, status, created_at, updated_at
+    SELECT id, title, due_date, status, notes, scholarship_id, created_at, updated_at
     FROM user_tasks
     WHERE user_id = ${auth.userId}
     ORDER BY created_at DESC
