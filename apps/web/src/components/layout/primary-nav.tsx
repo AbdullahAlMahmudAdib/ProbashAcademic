@@ -27,6 +27,7 @@ export default function PrimaryNav({ className, orientation = "horizontal", onNa
     { label: t("nav.visaScore"), href: "/visa-score", desktopOnly: true },
     { label: t("nav.financialPlanner"), href: "/financial-planner", desktopOnly: true },
     { label: t("nav.documentVault"), href: "/document-vault", desktopOnly: true },
+    { label: t("tracker.title"), href: "/tracker", desktopOnly: true },
     ...(role === "admin" ? [{ label: t("nav.admin"), href: "/admin" }] : []),
   ].filter((link) => !(link.desktopOnly && orientation === "vertical"));
 
