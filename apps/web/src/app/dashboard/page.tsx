@@ -83,6 +83,26 @@ export default function DashboardPage() {
   const [matchesLoading, setMatchesLoading] = useState(false);
   const [matchError, setMatchError] = useState<string | null>(null);
 
+  const [urgentTasks, setUrgentTasks] = useState<{ id: string; title: string; due_date: string; status: string }[]>([]);
+
+  useEffect(() => {
+    fetch("/api/tasks")
+      .then((r) => r.json())
+      .then((d) => {
+        const now = Date.now();
+        const urgent = (d.tasks ?? [])
+          .filter((task: any) => {
+            if (task.status === "Done" || !task.due_date) return false;
+            const days = Math.ceil((new Date(task.due_date).getTime() - now) / 86400000);
+            return days <= 14;
+          })
+          .sort((a: any, b: any) => new Date(a.due_date!).getTime() - new Date(b.due_date!).getTime())
+          .slice(0, 5);
+        setUrgentTasks(urgent);
+      })
+      .catch(() => {});
+  }, []);
+
   // Mobile-only segmented tab — desktop ignores this.
   type MobileTab = "today" | "bookmarks" | "profile";
   const [mobileTab, setMobileTab] = useState<MobileTab>("today");
@@ -453,6 +473,42 @@ export default function DashboardPage() {
               )}
             </div>
           </section>
+
+          {urgentTasks.length > 0 && (
+            <section className={styles.panel} data-mobile-section="today" style={{ marginTop: "12px" }}>
+              <div className={styles.panelHeader}>
+                <div>
+                  <p className={styles.kickerLight}>
+                    <span className={styles.liveDot} aria-hidden="true" />
+                    {t("tracker.urgentDeadlines")}
+                  </p>
+                  <h3>{t("tracker.urgentDeadlines")}</h3>
+                </div>
+                <Link href="/tracker" className={styles.linkButton}>
+                  {t("tracker.viewAll")}
+                </Link>
+              </div>
+              <ul className={styles.deadlineList}>
+                {urgentTasks.map((task) => {
+                  const days = Math.ceil((new Date(task.due_date).getTime() - Date.now()) / 86400000);
+                  const isUrgent = days >= 0 && days <= 7;
+                  return (
+                    <li key={task.id}>
+                      <div className={`${styles.deadlineItem} ${isUrgent ? styles.deadlineItemUrgent : ""}`}>
+                        <div>
+                          <h4>{task.title}</h4>
+                          <p>{task.status}</p>
+                        </div>
+                        <span className={styles.deadlineBadge}>
+                          {days < 0 ? t("tracker.overdue") : days === 0 ? t("tracker.today") : `${days} ${t("tracker.daysLeft")}`}
+                        </span>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+          )}
 
           {/* ── Profile completeness + Resume chat ── */}
           <section className={styles.row} data-mobile-section="profile">
