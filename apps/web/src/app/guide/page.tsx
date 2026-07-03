@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   description:
     "Free guides and expert FAQs on scholarships, IELTS, SOP writing, and studying in Germany, UK, USA — tailored for students from Bangladesh.",
   alternates: {
-    canonical: "https://baireporbo.app/guide",
+    canonical: "https://probashacademic.app/guide",
   },
   openGraph: {
-    title: "Study Abroad Guides & FAQs | BairePorbo",
+    title: "Study Abroad Guides & FAQs | ProbashAcademic",
     description:
       "Expert guides on Chevening, IELTS, SOP writing, GRE waivers, and studying in Europe — for Bangladeshi students.",
-    url: "https://baireporbo.app/guide",
+    url: "https://probashacademic.app/guide",
     type: "website",
   },
 };

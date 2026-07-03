@@ -1,8 +1,8 @@
-# BairePorbo — AI Scholarship Platform
+# ProbashAcademic — AI Scholarship Platform
 
-> **Live at [baireporbo.app](https://baireporbo.app)** — An AI-powered scholarship discovery and guidance platform built for Bangladeshi students pursuing international higher education.
+> **Live at [probashacademic.app](https://probashacademic.app)** — An AI-powered scholarship discovery and guidance platform built for Bangladeshi students pursuing international higher education.
 
-BairePorbo (Bengali: *"let's go abroad"*) helps students find, understand, and apply for scholarships through a curated database, AI-driven matching, and a conversational AI mentor — all in a fast, bilingual (Bengali + English) web experience.
+ProbashAcademic (Bengali: *"let's go abroad"*) helps students find, understand, and apply for scholarships through a curated database, AI-driven matching, and a conversational AI mentor — all in a fast, bilingual (Bengali + English) web experience.
 
 ---
 
@@ -31,7 +31,7 @@ Traffic is organic — driven primarily through Facebook community groups and wo
 - **Admin Scholarship Wizard** — Paste → Parse (AI) → Enrich (AI) → Thumbnail Upload → Publish → RAG Ingest. Admins can go from a raw scholarship URL to a fully published, AI-searchable listing in minutes.
 - **Educational Guides** — CMS-managed long-form guides (IELTS prep, GRE waivers, visa tips) with slugs, FAQs, and cover images.
 - **Bilingual UI** — `LangProvider` for live Bengali/English toggle across the entire app.
-- **PWA + Android TWA** — Installable as a web app and available as a native Android APK via Bubblewrap/TWA (`app.baireporbo.twa`).
+- **PWA + Android TWA** — Installable as a web app and available as a native Android APK via Bubblewrap/TWA (`app.probashacademic.twa`).
 
 ---
 
@@ -52,7 +52,7 @@ Traffic is organic — driven primarily through Facebook community groups and wo
 | **Fonts** | Fraunces, Manrope, Hind Siliguri |
 | **Package Manager** | pnpm |
 | **Hosting** | Vercel |
-| **CDN** | `cdn.baireporbo.app` (Cloudflare R2 public bucket) |
+| **CDN** | `cdn.probashacademic.app` (Cloudflare R2 public bucket) |
 | **Mobile** | PWA + Android TWA (Bubblewrap) |
 
 ---
@@ -121,7 +121,7 @@ Streamed response to client
 ## Project Structure
 
 ```
-BairePorbo/
+ProbashAcademic/
 ├── apps/
 │   └── web/                   # Next.js 16 — the entire production application
 │       ├── src/
@@ -205,8 +205,8 @@ Powered by **Clerk** (migrated from Supabase Auth in June 2026):
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/your-username/BairePorbo.git
-cd BairePorbo/apps/web
+git clone https://github.com/your-username/ProbashAcademic.git
+cd ProbashAcademic/apps/web
 pnpm install
 ```
 
@@ -276,12 +276,12 @@ The platform was originally built on Supabase. In June 2026 it was fully migrate
 
 ## Status
 
-- **Production:** [baireporbo.app](https://baireporbo.app) — live and actively growing
-- **Android:** TWA APK (`app.baireporbo.twa`) — installable from the website
+- **Production:** [probashacademic.app](https://probashacademic.app) — live and actively growing
+- **Android:** TWA APK (`app.probashacademic.twa`) — installable from the website
 - **CI/CD:** Deployed via Vercel on every push to `main`
 
 ---
 
 ## License
 
-All rights reserved © 2026 BairePorbo. This is a proprietary product — the source is shared for reference and evaluation purposes only.
+All rights reserved © 2026 ProbashAcademic. This is a proprietary product — the source is shared for reference and evaluation purposes only.

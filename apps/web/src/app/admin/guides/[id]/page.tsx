@@ -288,7 +288,7 @@ export default function EditGuidePage({ params }: { params: Promise<{ id: string
             <div
               key={i}
               style={{
-                border: "1px solid var(--sand-200)",
+                border: "1px solid var(--warm-200)",
                 borderRadius: 12,
                 overflow: "hidden",
               }}
@@ -298,7 +298,7 @@ export default function EditGuidePage({ params }: { params: Promise<{ id: string
                 style={{
                   width: "100%",
                   padding: "12px 16px",
-                  background: editingFaq === i ? "var(--sand-100)" : "#fafafa",
+                  background: editingFaq === i ? "var(--warm-100)" : "#fafafa",
                   border: "none",
                   textAlign: "left",
                   cursor: "pointer",
@@ -315,7 +315,7 @@ export default function EditGuidePage({ params }: { params: Promise<{ id: string
                     <em style={{ color: "var(--ink-500)", fontStyle: "normal" }}>New question…</em>
                   )}
                 </span>
-                <span style={{ fontSize: 18, color: "var(--teal-500)", flexShrink: 0 }}>
+                <span style={{ fontSize: 18, color: "var(--indigo-500)", flexShrink: 0 }}>
                   {editingFaq === i ? "−" : "+"}
                 </span>
               </button>

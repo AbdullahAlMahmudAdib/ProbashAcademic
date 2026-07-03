@@ -379,11 +379,11 @@ export default function NewScholarshipPage() {
                 <div className={styles.field} style={{ gridColumn: "1 / -1" }}>
                   <label>Application Status *</label>
                   <div style={{ display: "flex", gap: 12, marginTop: 6 }}>
-                    <label style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer", padding: "10px 16px", borderRadius: 10, border: `2px solid ${form.is_live ? "var(--teal-500, #0f8f8d)" : "var(--sand-200, #e8e5dc)"}`, background: form.is_live ? "rgba(15, 143, 141, 0.06)" : "var(--sand-50, #faf9f6)", flex: 1, fontWeight: form.is_live ? 600 : 400, color: form.is_live ? "var(--teal-700)" : "var(--ink-600)", fontSize: 13 }}>
-                      <input type="radio" name="is_live" value="live" checked={form.is_live} onChange={() => setBool("is_live", true)} style={{ accentColor: "var(--teal-500)" }} />
+                    <label style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer", padding: "10px 16px", borderRadius: 10, border: `2px solid ${form.is_live ? "var(--indigo-500, #6366f1)" : "var(--warm-200, #fed7aa)"}`, background: form.is_live ? "rgba(99, 102, 241, 0.08)" : "var(--warm-50, #fefbf6)", flex: 1, fontWeight: form.is_live ? 600 : 400, color: form.is_live ? "var(--indigo-700)" : "var(--ink-600)", fontSize: 13 }}>
+                      <input type="radio" name="is_live" value="live" checked={form.is_live} onChange={() => setBool("is_live", true)} style={{ accentColor: "var(--indigo-500)" }} />
                       Open Now — applications currently live
                     </label>
-                    <label style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer", padding: "10px 16px", borderRadius: 10, border: `2px solid ${!form.is_live ? "var(--amber-400, #f59e0b)" : "var(--sand-200, #e8e5dc)"}`, background: !form.is_live ? "rgba(245, 158, 11, 0.06)" : "var(--sand-50, #faf9f6)", flex: 1, fontWeight: !form.is_live ? 600 : 400, color: !form.is_live ? "var(--amber-700, #b45309)" : "var(--ink-600)", fontSize: 13 }}>
+                    <label style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer", padding: "10px 16px", borderRadius: 10, border: `2px solid ${!form.is_live ? "var(--amber-400, #f59e0b)" : "var(--warm-200, #fed7aa)"}`, background: !form.is_live ? "rgba(245, 158, 11, 0.06)" : "var(--warm-50, #fefbf6)", flex: 1, fontWeight: !form.is_live ? 600 : 400, color: !form.is_live ? "var(--amber-700, #b45309)" : "var(--ink-600)", fontSize: 13 }}>
                       <input type="radio" name="is_live" value="upcoming" checked={!form.is_live} onChange={() => setBool("is_live", false)} style={{ accentColor: "var(--amber-400)" }} />
                       Opening Soon — not yet accepting applications
                     </label>

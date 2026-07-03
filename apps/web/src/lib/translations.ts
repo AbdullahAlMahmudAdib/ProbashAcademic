@@ -32,7 +32,7 @@ export const translations = {
   // ── Homepage — Hero ──────────────────────────────────────────────────────
   "home.kicker": { en: "AI scholarship compass for Bangladesh", bn: "বাংলাদেশের জন্য AI Scholarship Compass" },
   "home.heroTitle": { en: "Find scholarships that fit your story, not just your grades.", bn: "এমন স্কলারশিপ খুঁজুন যা আপনার গল্পের সাথে মানানসই, CGPA এর সাথে নয়।" },
-  "home.heroCopy": { en: "BairePorbo guides students through higher-study decisions with explainable AI, localized advice, and a curated scholarship map.", bn: "BairePorbo — Explainable AI, localized advice আর curated scholarship map দিয়ে তোমার উচ্চশিক্ষার সিদ্ধান্তকে সহজ করে।" },
+  "home.heroCopy": { en: "ProbashAcademic guides students through higher-study decisions with explainable AI, localized advice, and a curated scholarship map.", bn: "ProbashAcademic — Explainable AI, localized advice আর curated scholarship map দিয়ে তোমার উচ্চশিক্ষার সিদ্ধান্তকে সহজ করে।" },
   "home.searchPlaceholder": { en: "Search by country, field, or scholarship name…", bn: "দেশ, বিষয় বা scholarship নাম দিয়ে খুঁজুন…" },
   "home.searchButton": { en: "Search", bn: "খুঁজুন" },
   "home.searchAriaLabel": { en: "Search scholarships", bn: "Scholarship খুঁজুন" },
@@ -92,7 +92,7 @@ export const translations = {
   "footer.replyTime": { en: "We typically reply within 24 hours.", bn: "আমরা সাধারণত ২৪ ঘণ্টার মধ্যে উত্তর দিই।" },
 
   // ── Android banner ────────────────────────────────────────────────────────
-  "banner.title": { en: "Get the BairePorbo app", bn: "BairePorbo app নিন" },
+  "banner.title": { en: "Get the ProbashAcademic app", bn: "ProbashAcademic app নিন" },
   "banner.sub": { en: "Faster, app-like experience", bn: "দ্রুত, app-এর মতো অভিজ্ঞতা" },
   "banner.install": { en: "Install", bn: "ইনস্টল করুন" },
 
@@ -190,7 +190,7 @@ export const translations = {
   "chat.signOut": { en: "Sign out", bn: "সাইন আউট" },
   "chat.signUpFree": { en: "Sign up free", bn: "বিনামূল্যে সাইন আপ" },
   "chat.suggestedPrompts": { en: "Suggested prompts", bn: "প্রশ্ন সাজেশন" },
-  "chat.askMentor": { en: "Ask BairePorbo Mentor", bn: "BairePorbo Mentor-কে জিজ্ঞেস করুন" },
+  "chat.askMentor": { en: "Ask ProbashAcademic Mentor", bn: "ProbashAcademic Mentor-কে জিজ্ঞেস করুন" },
   "chat.askAnything": { en: "Ask anything…", bn: "যেকোনো কিছু জিজ্ঞেস করুন…" },
   "chat.send": { en: "Send", bn: "পাঠান" },
   "chat.sending": { en: "Sending…", bn: "পাঠানো হচ্ছে…" },
@@ -198,7 +198,7 @@ export const translations = {
   "chat.signInToContinue": { en: "Sign in to continue →", bn: "চালিয়ে যেতে সাইন ইন করুন →" },
   "chat.tryAgainIn": { en: "Try again in", bn: "আবার চেষ্টা করুন" },
   "chat.freePreview": { en: "Free preview", bn: "বিনামূল্যে Preview" },
-  "chat.tryingWithout": { en: "You're trying BairePorbo without an account.", bn: "আপনি account ছাড়াই BairePorbo ব্যবহার করছেন।" },
+  "chat.tryingWithout": { en: "You're trying ProbashAcademic without an account.", bn: "আপনি account ছাড়াই ProbashAcademic ব্যবহার করছেন।" },
   "chat.freeMessagesLeftPre": { en: "", bn: "" },
   "chat.freeMessagesLeftPost": { en: "free messages left today.", bn: "টি বিনামূল্যে বার্তা বাকি আজ।" },
   "chat.signUpForMore": { en: "Sign up to get more messages, save conversations, and unlock scholarship matching.", bn: "আরো বার্তা পেতে, কথোপকথন সংরক্ষণ করতে ও scholarship matching পেতে সাইন আপ করুন।" },

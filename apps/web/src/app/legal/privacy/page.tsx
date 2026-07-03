@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import LegalLayout, { LegalSection } from "../legal-layout";
 
 const LAST_UPDATED = "May 27, 2026";
-const SUPPORT_EMAIL = "support@baireporbo.app";
+const SUPPORT_EMAIL = "support@probashacademic.app";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How BairePorbo collects, uses, and protects information you share when using our scholarship guidance product.",
+    "How ProbashAcademic collects, uses, and protects information you share when using our scholarship guidance product.",
 };
 
 const sections: LegalSection[] = [
@@ -17,7 +17,7 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          BairePorbo is a small product built for Bangladeshi students looking for
+          ProbashAcademic is a small product built for Bangladeshi students looking for
           scholarships. We try to collect as little as possible. Here&apos;s the short
           version:
         </p>
@@ -93,7 +93,7 @@ const sections: LegalSection[] = [
         </ul>
         <p>
           We do <strong>not</strong> use your personal data for advertising, profiling
-          for third parties, or any commercial purpose beyond running BairePorbo.
+          for third parties, or any commercial purpose beyond running ProbashAcademic.
         </p>
       </>
     ),
@@ -104,7 +104,7 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          BairePorbo is powered by a small set of trusted infrastructure providers.
+          ProbashAcademic is powered by a small set of trusted infrastructure providers.
           Each receives only the data needed for its specific function:
         </p>
         <ul>
@@ -199,7 +199,7 @@ const sections: LegalSection[] = [
           plaintext — they are hashed by our authentication provider.
         </p>
         <p>
-          BairePorbo is a small project. We do our best to keep your data safe, but no
+          ProbashAcademic is a small project. We do our best to keep your data safe, but no
           system is perfectly secure. If we ever discover a breach affecting your
           account, we will notify you within 72 hours of confirming it.
         </p>
@@ -211,7 +211,7 @@ const sections: LegalSection[] = [
     title: "Children",
     body: (
       <p>
-        BairePorbo is intended for students of higher-education age. We do not
+        ProbashAcademic is intended for students of higher-education age. We do not
         knowingly collect data from children under 13. If you believe a child has
         provided us with personal data, email{" "}
         <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> and we will delete it.
@@ -226,7 +226,7 @@ const sections: LegalSection[] = [
         Our database and authentication services are hosted on Supabase. The
         application itself runs on Vercel. AI providers process requests on their own
         infrastructure. Some of these services may store data outside Bangladesh.
-        By using BairePorbo, you consent to this cross-border processing.
+        By using ProbashAcademic, you consent to this cross-border processing.
       </p>
     ),
   },
@@ -237,7 +237,7 @@ const sections: LegalSection[] = [
       <p>
         If we materially change this policy, we will update the &ldquo;last
         updated&rdquo; date at the top and, where appropriate, notify you by email.
-        Continued use of BairePorbo after changes means you accept the updated policy.
+        Continued use of ProbashAcademic after changes means you accept the updated policy.
       </p>
     ),
   },
@@ -252,7 +252,7 @@ export default function PrivacyPage() {
       intro={
         <>
           <strong>The short version:</strong> we collect only what you give us, use it
-          to run BairePorbo, never sell it, and let you delete it whenever you want.
+          to run ProbashAcademic, never sell it, and let you delete it whenever you want.
           Full details below.
         </>
       }

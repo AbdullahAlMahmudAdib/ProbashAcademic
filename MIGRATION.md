@@ -1,7 +1,7 @@
-# BairePorbo — Supabase → Clerk + Neon + R2 Migration
+# ProbashAcademic — Supabase → Clerk + Neon + R2 Migration
 
 **Date:** June 14, 2026  
-**Status:** ✅ Complete and live at baireporbo.app  
+**Status:** ✅ Complete and live at probashacademic.app  
 **Scope:** Full replacement of Supabase (auth, database, storage) with Clerk, Neon, and Cloudflare R2.
 
 ---
@@ -12,7 +12,7 @@
 |--------|-------|
 | Supabase Auth (email + Google OAuth) | Clerk (email + Google OAuth) |
 | Supabase PostgreSQL | Neon PostgreSQL (Postgres 18, pgvector) |
-| Supabase Storage | Cloudflare R2 (`cdn.baireporbo.app`) |
+| Supabase Storage | Cloudflare R2 (`cdn.probashacademic.app`) |
 
 ---
 
@@ -108,7 +108,7 @@ Dynamic PATCH routes use `sqlQuery()` instead of `sql()` as a regular function (
 - `src/app/api/admin/guides/[id]/cover/route.ts` — uploads to R2
 - `next.config.ts` — added `NEXT_PUBLIC_R2_PUBLIC_DOMAIN` to `remotePatterns`
 
-**Custom domain:** `cdn.baireporbo.app` → Cloudflare R2 bucket `baireporbo`
+**Custom domain:** `cdn.probashacademic.app` → Cloudflare R2 bucket `probashacademic`
 
 ---
 
@@ -131,8 +131,8 @@ NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
 R2_ACCOUNT_ID=...
 R2_ACCESS_KEY_ID=...
 R2_SECRET_ACCESS_KEY=...
-R2_BUCKET_NAME=baireporbo
-NEXT_PUBLIC_R2_PUBLIC_DOMAIN=cdn.baireporbo.app
+R2_BUCKET_NAME=probashacademic
+NEXT_PUBLIC_R2_PUBLIC_DOMAIN=cdn.probashacademic.app
 ```
 
 ---
@@ -183,7 +183,7 @@ NEXT_PUBLIC_R2_PUBLIC_DOMAIN=cdn.baireporbo.app
 
 ---
 
-## Clerk DNS Records (baireporbo.app on Cloudflare)
+## Clerk DNS Records (probashacademic.app on Cloudflare)
 
 All set to **DNS only** (no proxy):
 
@@ -203,7 +203,7 @@ All set to **DNS only** (no proxy):
 - [x] Migrate content (`migrate-content.mjs`)
 - [x] Migrate users to Clerk Production (`migrate-users.mjs`)
 - [x] Migrate user data (`migrate-data.mjs`)
-- [x] Register Clerk webhook: `https://baireporbo.app/api/webhooks/clerk` → `user.created`
+- [x] Register Clerk webhook: `https://probashacademic.app/api/webhooks/clerk` → `user.created`
 - [x] Configure Google OAuth in Clerk Production + add redirect URI to Google Cloud Console
 - [x] Add Clerk DNS CNAMEs in Cloudflare
 - [x] Deploy app with new env vars

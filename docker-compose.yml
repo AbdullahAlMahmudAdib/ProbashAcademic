@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    container_name: probash-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: probash
+      POSTGRES_PASSWORD: probash_dev
+      POSTGRES_DB: probash
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/01-init.sql
+
+volumes:
+  pgdata:

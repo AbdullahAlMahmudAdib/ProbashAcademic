@@ -18,7 +18,7 @@
 
 /* ── Header ── */
 .header {
-  background: linear-gradient(135deg, #0f2633 0%, #0a4a48 60%, #0f8f8d 100%);
+  background: linear-gradient(135deg, #1e1b4b 0%, #3730a3 60%, #6366f1 100%);
   color: #fff;
   padding: 2.5rem 2rem 2rem;
   text-align: center;
@@ -48,8 +48,7 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #5de8de;
-  margin-bottom: 0.75rem;
+  color: #a5b4fc;
 }
 
 .title {
@@ -83,7 +82,7 @@
 }
 
 .statsBar strong {
-  color: #5de8de;
+  color: #a5b4fc;
 }
 
 .statsDivider {
@@ -92,6 +91,7 @@
 
 /* ── Grid Section ── */
 .gridSection {
+  background: linear-gradient(180deg, rgba(245, 158, 11, 0.06) 0%, transparent 100%);
   padding: 3.5rem 2rem;
   max-width: 1200px;
   width: 100%;
@@ -109,11 +109,13 @@
 .card {
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-radius: 16px;
   padding: 1.5rem;
-  border: 1.5px solid rgba(15, 143, 141, 0.1);
-  box-shadow: 0 2px 12px rgba(15, 34, 52, 0.06);
+  border: 1.5px solid var(--glass-border);
+  box-shadow: var(--shadow-glass);
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
   cursor: pointer;
   text-decoration: none;
@@ -123,8 +125,8 @@
 
 .card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(15, 34, 52, 0.14);
-  border-color: rgba(15, 143, 141, 0.35);
+  box-shadow: var(--shadow-glass), 0 12px 40px rgba(99, 102, 241, 0.12);
+  border-color: rgba(99, 102, 241, 0.3);
 }
 
 /* ── Card thumbnail ── */
@@ -134,7 +136,7 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 15px 15px 0 0;
-  background: var(--sand-100);
+  background: var(--warm-100);
 }
 
 .cardThumbImg {
@@ -181,9 +183,9 @@
   border-radius: 100px;
 }
 
-.categoryBadge[data-color="teal"] {
-  background: #e0f5f4;
-  color: #0a6d6b;
+.categoryBadge[data-color="indigo"] {
+  background: #eef2ff;
+  color: #3730a3;
 }
 
 .categoryBadge[data-color="coral"] {
@@ -196,7 +198,7 @@
   color: #2d5fa6;
 }
 
-.categoryBadge[data-color="sand"] {
+.categoryBadge[data-color="warm"] {
   background: #f7f3ee;
   color: #7a5e3a;
 }
@@ -233,7 +235,7 @@
   gap: 0.5rem;
   margin-top: 0.25rem;
   padding-top: 0.75rem;
-  border-top: 1px solid var(--sand-200);
+  border-top: 1px solid var(--warm-200);
 }
 
 .tagList {
@@ -246,7 +248,7 @@
 
 .tag {
   font-size: 0.7rem;
-  background: var(--sand-100);
+  background: var(--warm-100);
   color: var(--ink-500);
   padding: 0.2rem 0.55rem;
   border-radius: 100px;
@@ -256,20 +258,20 @@
 .readMore {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--teal-500);
+  color: var(--indigo-500);
   white-space: nowrap;
   flex-shrink: 0;
   transition: color 0.15s;
 }
 
 .card:hover .readMore {
-  color: var(--teal-700);
+  color: var(--indigo-700);
 }
 
 /* ── CTA Banner ── */
 .ctaBanner {
-  background: var(--sand-100);
-  border-top: 1px solid var(--sand-200);
+  background: var(--warm-100);
+  border-top: 1px solid var(--warm-200);
   padding: 3.5rem 2rem;
   text-align: center;
 }
@@ -284,7 +286,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  color: var(--teal-500);
+  color: var(--indigo-500);
   margin-bottom: 0.75rem;
 }
 
@@ -306,7 +308,7 @@
 
 .ctaButton {
   display: inline-block;
-  background: var(--teal-500);
+  background: var(--indigo-500);
   color: #fff;
   font-weight: 600;
   font-size: 0.9375rem;
@@ -317,7 +319,7 @@
 }
 
 .ctaButton:hover {
-  background: var(--teal-700);
+  background: var(--indigo-700);
   transform: translateY(-1px);
 }
 

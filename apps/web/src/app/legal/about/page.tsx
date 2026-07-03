@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import LegalLayout, { LegalSection } from "../legal-layout";
 
-const SUPPORT_EMAIL = "support@baireporbo.app";
-const FACEBOOK_URL = "https://www.facebook.com/baireporbo/";
+const SUPPORT_EMAIL = "support@probashacademic.app";
+const FACEBOOK_URL = "https://www.facebook.com/probashacademic/";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about BairePorbo — AI-powered scholarship guidance built for Bangladeshi students pursuing study abroad.",
+    "Learn about ProbashAcademic — AI-powered scholarship guidance built for Bangladeshi students pursuing study abroad.",
 };
 
 const sections: LegalSection[] = [
@@ -17,14 +17,14 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          BairePorbo exists to make scholarship discovery less overwhelming for
+          ProbashAcademic exists to make scholarship discovery less overwhelming for
           Bangladeshi students. Finding the right funding for a master&apos;s or PhD
           abroad often means digging through dozens of university pages, outdated
           blog posts, and scattered Facebook groups — with no clear sense of what
           actually fits your profile.
         </p>
         <p>
-          We built BairePorbo to bring that process into one place: searchable
+          We built ProbashAcademic to bring that process into one place: searchable
           scholarships, AI-powered matching based on your background, and an
           always-available mentor to answer questions in plain language — in
           English or Bengali.
@@ -65,14 +65,14 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          BairePorbo is built for Bangladeshi students — whether you are in your
+          ProbashAcademic is built for Bangladeshi students — whether you are in your
           final year of undergrad, already working, or preparing for a second
           degree. Our focus is on scholarships for study abroad, particularly
           master&apos;s and PhD programmes in countries like the United States,
           United Kingdom, Germany, Australia, and Canada.
         </p>
         <p>
-          You do not need a perfect profile to use BairePorbo. Many scholarships
+          You do not need a perfect profile to use ProbashAcademic. Many scholarships
           exist for a wide range of backgrounds, and our goal is to help you find
           the ones worth your time.
         </p>
@@ -85,7 +85,7 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          BairePorbo is a small, independent product. We are not affiliated with
+          ProbashAcademic is a small, independent product. We are not affiliated with
           any university, government agency, or scholarship provider. Scholarship
           listings are compiled from public sources and verified where possible,
           but deadlines and requirements can change — always confirm details on
@@ -121,10 +121,10 @@ export default function AboutPage() {
   return (
     <LegalLayout
       kicker="Company"
-      title="About BairePorbo"
+      title="About ProbashAcademic"
       intro={
         <p>
-          <strong>BairePorbo</strong> is AI-powered scholarship guidance, built
+          <strong>ProbashAcademic</strong> is AI-powered scholarship guidance, built
           for Bangladeshi students. This page explains who we are, what we do, and
           why we built it.
         </p>

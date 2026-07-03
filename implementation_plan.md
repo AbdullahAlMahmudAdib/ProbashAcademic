@@ -1,4 +1,4 @@
-# BairePorbo.app — Implementation Plan
+# ProbashAcademic.app — Implementation Plan
 
 AI-powered scholarship & higher study guidance platform for Bangladeshi/South Asian students.
 
@@ -57,7 +57,7 @@ graph TB
 
 ## Open Questions
 
-1. **Domain & Branding** — Do you already have the `baireporbo.app` domain? Any logo/color palette preferences, or should I design from scratch?
+1. **Domain & Branding** — Do you already have the `probashacademic.app` domain? Any logo/color palette preferences, or should I design from scratch?
 2. **Scholarship Data Source** — Will you seed scholarships manually via the admin panel, or do you have a dataset/CSV to bulk-import initially?
 3. **Deployment Budget** — Railway free tier has limits. Are you okay with Render free tier as the backend host, or do you have a budget for Railway Pro?
 
@@ -70,7 +70,7 @@ graph TB
 #### [NEW] Root config files
 
 ```
-BairePorbo/
+ProbashAcademic/
 ├── apps/
 │   ├── web/                 # Next.js 15 frontend
 │   └── api/                 # NestJS backend
@@ -91,7 +91,7 @@ BairePorbo/
 
 ### Database Layer (`packages/db`)
 
-#### [NEW] [schema.prisma](file:///home/nehal/Dev/BairePorbo/packages/db/prisma/schema.prisma)
+#### [NEW] [schema.prisma](file:///home/nehal/Dev/ProbashAcademic/packages/db/prisma/schema.prisma)
 
 Core tables with Prisma schema:
 

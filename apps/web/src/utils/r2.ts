@@ -58,7 +58,7 @@ export async function deleteFromR2(key: string): Promise<void> {
  * configured in your Cloudflare R2 bucket settings).
  *
  * @example getPublicUrl("scholarship-thumbnails/123/thumbnail.webp")
- *   // → "https://cdn.baireporbo.com/scholarship-thumbnails/123/thumbnail.webp"
+ *   // → "https://cdn.probashacademic.com/scholarship-thumbnails/123/thumbnail.webp"
  */
 export function getPublicUrl(key: string): string {
   return `https://${R2_PUBLIC_DOMAIN}/${key}`;

@@ -3,13 +3,18 @@
   height: 100dvh;
   display: grid;
   grid-template-columns: 320px minmax(0, 1fr);
-  background: rgba(255, 255, 255, 0.6);
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(99, 102, 241, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 15%, rgba(245, 158, 11, 0.03) 0%, transparent 50%),
+    rgba(255, 255, 255, 0.6);
   overflow: hidden;
 }
 
 .sidebar {
-  background: rgba(255, 255, 255, 0.92);
-  border-right: 1px solid var(--sand-200);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-right: 1px solid var(--glass-border);
   display: flex;
   flex-direction: column;
   padding: 24px 20px;
@@ -51,7 +56,7 @@
 .mobileSidebarToggle {
   display: none;
   background: transparent;
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
   padding: 6px 12px;
   border-radius: 999px;
   font-size: 12px;
@@ -105,8 +110,10 @@
 
 .sessionCard {
   text-align: left;
-  border: 1px solid var(--sand-200);
-  background: #ffffff;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border-radius: 16px;
   padding: 12px;
   cursor: pointer;
@@ -114,18 +121,18 @@
 }
 
 .sessionCard:focus {
-  outline: 2px solid rgba(15, 143, 141, 0.4);
+  outline: 2px solid rgba(99, 102, 241, 0.4);
   outline-offset: 2px;
 }
 
 .sessionCard:hover {
-  border-color: var(--teal-500);
+  border-color: var(--indigo-500);
   transform: translateY(-1px);
 }
 
 .sessionCardActive {
-  border-color: var(--teal-500);
-  background: rgba(15, 143, 141, 0.06);
+  border-color: var(--indigo-500);
+  background: rgba(99, 102, 241, 0.08);
 }
 
 .sessionEmpty {
@@ -192,8 +199,10 @@
 .anonSidebar {
   padding: 14px 16px;
   border-radius: 14px;
-  background: linear-gradient(135deg, rgba(15, 143, 141, 0.08), rgba(240, 138, 104, 0.08));
-  border: 1px solid var(--sand-200);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(99, 102, 241, 0.04));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid var(--glass-border);
 }
 
 .anonSidebarTitle {
@@ -201,7 +210,7 @@
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--teal-700);
+  color: var(--indigo-700);
   margin: 0 0 6px;
 }
 
@@ -246,7 +255,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 11px;
-  color: var(--teal-700);
+  color: var(--indigo-700);
   font-weight: 600;
 }
 
@@ -271,8 +280,10 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid var(--sand-200);
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
   border-radius: 999px;
   padding: 6px 10px;
   font-size: 12px;
@@ -285,7 +296,7 @@
   gap: 8px;
   padding: 4px 8px;
   border-radius: 999px;
-  background: rgba(15, 143, 141, 0.06);
+  background: rgba(99, 102, 241, 0.08);
 }
 
 .contextLabelInline {
@@ -343,16 +354,20 @@
 
 .messageBubble {
   max-width: 65%;
-  background: #ffffff;
-  border: 1px solid var(--sand-200);
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
   border-radius: 18px;
   padding: 12px 14px;
-  box-shadow: 0 12px 24px rgba(15, 34, 52, 0.08);
+  box-shadow: var(--shadow-glass);
 }
 
 .messageStudent .messageBubble {
-  background: rgba(15, 143, 141, 0.12);
-  border-color: rgba(15, 143, 141, 0.2);
+  background: rgba(99, 102, 241, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-color: rgba(99, 102, 241, 0.18);
 }
 
 .messageBubble p {
@@ -432,9 +447,9 @@
 .markdownBody code {
   font-family: "Fira Code", "Cascadia Code", "Courier New", monospace;
   font-size: 0.88em;
-  background: rgba(15, 143, 141, 0.08);
-  color: var(--teal-700);
-  border: 1px solid rgba(15, 143, 141, 0.18);
+  background: rgba(99, 102, 241, 0.08);
+  color: var(--indigo-700);
+  border: 1px solid rgba(99, 102, 241, 0.18);
   border-radius: 5px;
   padding: 0.1em 0.35em;
 }
@@ -458,19 +473,19 @@
 
 /* Blockquotes */
 .markdownBody blockquote {
-  border: 1px solid rgba(15, 143, 141, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.15);
   padding: 8px 14px;
   margin: 0.5em 0;
   color: var(--ink-700);
   font-style: italic;
-  background: rgba(15, 143, 141, 0.05);
+  background: rgba(99, 102, 241, 0.05);
   border-radius: var(--radius-sm);
 }
 
 /* Horizontal rule */
 .markdownBody hr {
   border: none;
-  border-top: 1px solid var(--sand-200);
+  border-top: 1px solid var(--warm-200);
   margin: 0.8em 0;
 }
 
@@ -478,7 +493,7 @@
 .markdownBody table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
   border-radius: 8px;
   overflow: hidden;
   display: block;
@@ -487,14 +502,14 @@
 }
 
 .markdownBody thead {
-  background: rgba(15, 143, 141, 0.08);
+  background: rgba(99, 102, 241, 0.08);
 }
 
 .markdownBody th,
 .markdownBody td {
   text-align: left;
   padding: 8px 10px;
-  border-bottom: 1px solid var(--sand-200);
+  border-bottom: 1px solid var(--warm-200);
   font-size: 12px;
   color: var(--ink-900);
 }
@@ -510,7 +525,7 @@
 
 /* Links */
 .markdownBody a {
-  color: var(--teal-700);
+  color: var(--indigo-700);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -527,7 +542,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--teal-500);
+  background: var(--indigo-500);
   animation: typingPulse 1.2s infinite ease-in-out;
 }
 
@@ -557,9 +572,11 @@
   gap: 12px;
   padding: 14px 16px;
   border-radius: 16px;
-  background: linear-gradient(135deg, rgba(15, 143, 141, 0.08), rgba(240, 138, 104, 0.08));
-  border: 1px solid rgba(15, 143, 141, 0.2);
-  box-shadow: 0 4px 14px rgba(15, 143, 141, 0.08);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.06), rgba(245, 158, 11, 0.06));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-glass);
 }
 
 .rateLimitIcon {
@@ -592,7 +609,7 @@
   margin-top: 2px;
   font-size: 12.5px;
   font-weight: 700;
-  color: var(--teal-700);
+  color: var(--indigo-700);
   text-decoration: none;
 }
 
@@ -612,9 +629,9 @@
   font-size: 12px;
 }
 
-.statusReady    { color: var(--teal-700); }
+.statusReady    { color: var(--indigo-700); }
 .statusLoading  { color: var(--coral-400); }
-.statusStreaming{ color: var(--teal-500); }
+.statusStreaming{ color: var(--indigo-500); }
 .statusError    { color: #c0392b; }
 
 .statusDot {
@@ -682,22 +699,33 @@
 }
 
 .suggestionChip {
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--glass-border);
   border-radius: 999px;
   padding: 8px 12px;
-  background: #ffffff;
+  background: var(--glass-bg);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   font-size: 12px;
   cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.suggestionChip:hover {
+  border-color: var(--indigo-500);
+  background: rgba(99, 102, 241, 0.06);
 }
 
 .inputBar {
   display: flex;
   align-items: flex-end;
   gap: 16px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid var(--sand-200);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
   border-radius: 18px;
   padding: 12px;
+  box-shadow: var(--shadow-glass);
 }
 
 .inputLabel {
@@ -710,7 +738,7 @@
 }
 
 .inputLabel textarea {
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
   border-radius: 14px;
   padding: 10px 12px;
   font-size: 13px;
@@ -737,13 +765,13 @@
   font-size: 12px;
   font-weight: 500;
   color: var(--ink-700);
-  background: rgba(15, 143, 141, 0.08);
-  border: 1px solid rgba(15, 143, 141, 0.2);
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.2);
   white-space: nowrap;
 }
 
 .anonQuotaChip a {
-  color: var(--teal-700);
+  color: var(--indigo-700);
   font-weight: 700;
   text-decoration: none;
 }
@@ -772,19 +800,19 @@
 }
 
 .primaryButton {
-  background: var(--teal-500);
+  background: var(--indigo-500);
   color: #ffffff;
   border: none;
   padding: 10px 16px;
   border-radius: 12px;
   font-size: 13px;
   cursor: pointer;
-  box-shadow: 0 12px 24px rgba(15, 143, 141, 0.2);
+  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.2);
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .primaryButton:hover:not(:disabled) {
-  background: var(--teal-700);
+  background: var(--indigo-700);
   transform: translateY(-1px);
 }
 
@@ -806,7 +834,7 @@
 
 .ghostButton {
   background: transparent;
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
   color: var(--ink-900);
   padding: 10px 16px;
   border-radius: 12px;
@@ -837,8 +865,10 @@
     bottom: 0;
     width: 300px;
     z-index: 999;
-    background: #ffffff;
-    border-right: 1px solid var(--sand-200);
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-right: 1px solid var(--glass-border);
     border-bottom: none;
     transform: translateX(-100%);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);

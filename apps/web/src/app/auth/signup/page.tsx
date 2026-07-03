@@ -123,8 +123,8 @@ export default function SignupPage() {
       <div className={styles.page}>
         <div className={styles.card}>
           <div className={styles.logo}>
-            <Image src="/logo.png" alt="BairePorbo Logo" width={28} height={28} className={styles.logoImage} />
-            <span className={styles.logoText}>BairePorbo</span>
+            <Image src="/logo.png" alt="ProbashAcademic Logo" width={28} height={28} className={styles.logoImage} />
+            <span className={styles.logoText}>ProbashAcademic</span>
           </div>
           <h1 className={styles.heading}>{t("signup.successHeading")}</h1>
           <p className={styles.sub}>{t("signup.successSub")}</p>
@@ -140,8 +140,8 @@ export default function SignupPage() {
     <div className={styles.page}>
       <div className={styles.card}>
         <div className={styles.logo}>
-          <Image src="/logo.png" alt="BairePorbo Logo" width={28} height={28} className={styles.logoImage} />
-          <span className={styles.logoText}>BairePorbo</span>
+          <Image src="/logo.png" alt="ProbashAcademic Logo" width={28} height={28} className={styles.logoImage} />
+          <span className={styles.logoText}>ProbashAcademic</span>
         </div>
         <h1 className={styles.heading}>{t("signup.heading")}</h1>
         <p className={styles.sub}>{t("signup.sub")}</p>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import HomeClient from "./home-client";
 
-const BASE_URL = "https://baireporbo.app";
+const BASE_URL = "https://probashacademic.app";
 
 export const metadata: Metadata = {
   title: "Find International Scholarships for Bangladeshi Students",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: BASE_URL,
   },
   openGraph: {
-    title: "Find International Scholarships for Bangladeshi Students | BairePorbo",
+    title: "Find International Scholarships for Bangladeshi Students | ProbashAcademic",
     description:
       "AI-powered scholarship discovery for students from Bangladesh. Browse 300+ opportunities across 30+ countries with eligibility breakdowns and application timelines.",
     url: BASE_URL,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "BairePorbo — International Scholarships for Bangladeshi Students",
+        alt: "ProbashAcademic — International Scholarships for Bangladeshi Students",
       },
     ],
   },

@@ -3,12 +3,12 @@ import Link from "next/link";
 import LegalLayout, { LegalSection } from "../legal-layout";
 
 const LAST_UPDATED = "May 27, 2026";
-const SUPPORT_EMAIL = "support@baireporbo.app";
+const SUPPORT_EMAIL = "support@probashacademic.app";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "The terms governing your use of BairePorbo's scholarship guidance and AI mentor services.",
+    "The terms governing your use of ProbashAcademic's scholarship guidance and AI mentor services.",
 };
 
 const sections: LegalSection[] = [
@@ -17,7 +17,7 @@ const sections: LegalSection[] = [
     title: "Acceptance of these terms",
     body: (
       <p>
-        By creating an account or using BairePorbo, you agree to these Terms of
+        By creating an account or using ProbashAcademic, you agree to these Terms of
         Service. If you do not agree, please do not use the service. These terms apply
         to both signed-in users and anonymous visitors using the limited free preview
         of the AI mentor.
@@ -26,10 +26,10 @@ const sections: LegalSection[] = [
   },
   {
     id: "what-bp-is",
-    title: "What BairePorbo is",
+    title: "What ProbashAcademic is",
     body: (
       <>
-        <p>BairePorbo provides:</p>
+        <p>ProbashAcademic provides:</p>
         <ul>
           <li>A searchable catalog of international scholarships curated for Bangladeshi students.</li>
           <li>An AI mentor that answers questions about scholarships, eligibility, and applications.</li>
@@ -37,7 +37,7 @@ const sections: LegalSection[] = [
           <li>Personal tools (bookmarks, chat history, dashboard) tied to your account.</li>
         </ul>
         <p>
-          BairePorbo is an <strong>information and guidance tool</strong>. We do not
+          ProbashAcademic is an <strong>information and guidance tool</strong>. We do not
           submit applications on your behalf, guarantee admission, guarantee funding,
           or act as an agent of any university or scholarship body.
         </p>
@@ -66,7 +66,7 @@ const sections: LegalSection[] = [
           </li>
         </ul>
         <p>
-          BairePorbo is not liable for application decisions you make based on AI
+          ProbashAcademic is not liable for application decisions you make based on AI
           responses. If you find inaccurate information, email{" "}
           <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> so we can fix it.
         </p>
@@ -101,7 +101,7 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          BairePorbo is meant to help students. To keep the service available for
+          ProbashAcademic is meant to help students. To keep the service available for
           everyone, you agree not to:
         </p>
         <ul>
@@ -117,7 +117,7 @@ const sections: LegalSection[] = [
           <li>Submit requests intended to overload, disrupt, or abuse the system.</li>
           <li>Send harmful, illegal, harassing, or hateful content through any feature.</li>
           <li>
-            Resell, redistribute, or commercially exploit BairePorbo&apos;s content
+            Resell, redistribute, or commercially exploit ProbashAcademic&apos;s content
             without written permission.
           </li>
           <li>
@@ -139,7 +139,7 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          BairePorbo is currently free to use. Anonymous visitors get a limited number
+          ProbashAcademic is currently free to use. Anonymous visitors get a limited number
           of mentor messages per day; signed-in users get higher limits. Specific
           quotas are subject to change.
         </p>
@@ -160,7 +160,7 @@ const sections: LegalSection[] = [
           You retain ownership of the information you submit — your profile fields,
           chat questions, bookmarks, and notes. By using the service, you grant us a
           limited licence to store and process this content for the sole purpose of
-          operating BairePorbo for you.
+          operating ProbashAcademic for you.
         </p>
         <p>
           We do <strong>not</strong> use your private content to train AI models. We
@@ -175,7 +175,7 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          BairePorbo&apos;s name, logo, design, code, and curated scholarship summaries
+          ProbashAcademic&apos;s name, logo, design, code, and curated scholarship summaries
           are owned by us. The underlying scholarship details (deadlines, eligibility,
           funding amounts) belong to the respective scholarship providers and
           universities. We summarise and reorganise them for educational purposes
@@ -195,7 +195,7 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          You can stop using BairePorbo at any time. Email{" "}
+          You can stop using ProbashAcademic at any time. Email{" "}
           <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> if you want your
           account and data deleted permanently.
         </p>
@@ -212,7 +212,7 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          BairePorbo is provided <strong>as-is</strong> and <strong>as available</strong>.
+          ProbashAcademic is provided <strong>as-is</strong> and <strong>as available</strong>.
           We don&apos;t guarantee:
         </p>
         <ul>
@@ -229,7 +229,7 @@ const sections: LegalSection[] = [
     title: "Limitation of liability",
     body: (
       <p>
-        To the extent permitted by law, BairePorbo and its operators are not liable
+        To the extent permitted by law, ProbashAcademic and its operators are not liable
         for any indirect, incidental, or consequential damages — including lost
         opportunities, missed deadlines, or rejected applications — arising from your
         use of the service. Your sole remedy is to stop using the service.
@@ -269,7 +269,7 @@ export default function TermsPage() {
       lastUpdated={LAST_UPDATED}
       intro={
         <>
-          <strong>The short version:</strong> use BairePorbo to find scholarships and
+          <strong>The short version:</strong> use ProbashAcademic to find scholarships and
           ask questions, but always verify AI answers against official sources before
           applying. We&apos;re a tool, not a guarantee. See also our{" "}
           <Link href="/legal/privacy">privacy policy</Link>.

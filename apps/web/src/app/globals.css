@@ -1,52 +1,74 @@
-/* ── Design Tokens ─────────────────────────────────────────── */
+/* ── Design Tokens — ProbashAcademic 3.0 (Indigo + Amber) ─── */
 :root {
+  /* Indigo (brand primary — replaces teal) */
+  --indigo-50:  #eef2ff;
+  --indigo-100: #e0e7ff;
+  --indigo-200: #c7d2fe;
+  --indigo-400: #818cf8;
+  --indigo-500: #6366f1;
+  --indigo-600: #4f46e5;
+  --indigo-700: #3730a3;
+  --indigo-800: #1e1b4b;
+  --indigo-900: #0f0e2e;
+
+  /* Amber (accent — warm, no green) */
+  --amber-50:  #fffbeb;
+  --amber-100: #fef3c7;
+  --amber-400: #fbbf24;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+  --amber-700: #b45309;
+
+  /* Coral (secondary accent — warm pink) */
+  --coral-100: #ffe4e6;
+  --coral-400: #fb7185;
+  --coral-500: #f43f5e;
+  --coral-700: #be123c;
+
   /* Ink (text) */
-  --ink-900: #1b1b1b;
-  --ink-800: #2a2a2a;
-  --ink-700: #3d3d3d;
-  --ink-500: #5e5e5e;
-  --ink-400: #9aa8b8;
-  --ink-300: #b8c4d0;
+  --ink-900: #1a1a2e;
+  --ink-800: #2a2a3e;
+  --ink-700: #3d3d52;
+  --ink-500: #787885;
+  --ink-400: #9ca3af;
+  --ink-300: #d1d5db;
 
-  /* Surface / Neutral */
-  --sand-50:  #faf9f7;
-  --sand-100: #f4f1ed;
-  --sand-200: #e8e3db;
-  --sand-300: #d4cfc7;
+  /* Surface / Neutral (warm-toned) */
+  --warm-50:  #fefbf6;
+  --warm-100: #f5f2ed;
+  --warm-200: #e6e0d8;
+  --warm-300: #d4cdc4;
 
-  /* Brand: Teal */
-  --teal-100: #e0f5f4;
-  --teal-200: #b0e5e3;
-  --teal-500: #0f8f8d;
-  --teal-600: #0c7b79;
-  --teal-700: #0a6d6b;
-  --teal-800: #074e4d;
-
-  /* Brand: Coral */
-  --coral-100: #fdeee9;
-  --coral-400: #f08a68;
-  --coral-500: #e06e48;
-  --coral-700: #b14a2a;
+  /* Glass tokens */
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(0, 0, 0, 0.06);
+  --glass-blur: blur(20px);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  --glass-dark-bg: rgba(15, 14, 46, 0.6);
+  --glass-dark-border: rgba(255, 255, 255, 0.08);
 
   /* Semantic */
-  --sky-200: #dfe7f5;
   --card: #ffffff;
-  --bg-body: #f8f8f7;
+  --bg-body: #fefbf6;
   --bg-surface: #ffffff;
-  --bg-muted: var(--sand-100);
-  --border-default: var(--sand-200);
-  --border-strong: var(--sand-300);
+  --bg-muted: var(--warm-100);
+  --border-default: var(--warm-200);
+  --border-strong: var(--warm-300);
 
-  /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(15, 34, 52, 0.05);
-  --shadow-md: 0 8px 24px rgba(15, 34, 52, 0.08);
-  --shadow-lg: 0 24px 48px rgba(15, 34, 52, 0.12);
-  --shadow-xl: 0 24px 70px rgba(15, 34, 52, 0.16);
+  /* Shadows (shifted to indigo tint) */
+  --shadow-sm: 0 2px 8px rgba(15, 14, 46, 0.05);
+  --shadow-md: 0 8px 24px rgba(15, 14, 46, 0.08);
+  --shadow-lg: 0 24px 48px rgba(15, 14, 46, 0.12);
+  --shadow-xl: 0 24px 70px rgba(15, 14, 46, 0.16);
+
+  /* Glass shadow */
+  --shadow-glass: 0 8px 32px rgba(15, 14, 46, 0.08);
 
   /* Radius */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
+  --radius-xl: 24px;
   --radius-pill: 999px;
 
   /* Z-index scale */
@@ -62,8 +84,18 @@
   --z-tooltip: 100;
 
   /* Focus ring */
-  --focus-ring: 0 0 0 2px var(--teal-500);
-  --focus-ring-offset: 0 0 0 4px rgba(15, 143, 141, 0.2);
+  --focus-ring: 0 0 0 2px var(--indigo-500);
+  --focus-ring-offset: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+/* ── Gradient utilities ───────────────────────────────────── */
+:root {
+  --gradient-indigo: linear-gradient(135deg, var(--indigo-900), var(--indigo-700));
+  --gradient-indigo-amber: linear-gradient(135deg, var(--indigo-700), var(--amber-500));
+  --gradient-amber-coral: linear-gradient(135deg, var(--amber-500), var(--coral-400));
+  --gradient-mesh: radial-gradient(ellipse 60% 50% at 0% 0%, rgba(99, 102, 241, 0.1) 0%, transparent 60%),
+                   radial-gradient(ellipse 50% 60% at 100% 20%, rgba(251, 191, 36, 0.08) 0%, transparent 60%),
+                   radial-gradient(ellipse 40% 40% at 50% 100%, rgba(251, 113, 133, 0.06) 0%, transparent 60%);
 }
 
 /* ── Base Reset ───────────────────────────────────────────── */
@@ -128,7 +160,7 @@ button {
 
 /* ── Global Focus Indicators ──────────────────────────────── */
 :focus-visible {
-  outline: 2px solid var(--teal-500);
+  outline: 2px solid var(--indigo-500);
   outline-offset: 2px;
 }
 
@@ -137,7 +169,7 @@ input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
   outline: none;
-  border-color: var(--teal-500);
+  border-color: var(--indigo-500);
   box-shadow: var(--focus-ring), var(--focus-ring-offset);
 }
 

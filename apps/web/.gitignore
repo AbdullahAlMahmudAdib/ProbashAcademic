@@ -43,3 +43,6 @@ next-env.d.ts
 # Android keystore — never commit signing keys
 *.keystore
 *.jks
+
+# clerk configuration (can include secrets)
+/.clerk/

@@ -23,8 +23,8 @@
   width: 32px;
   height: 32px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--teal-500), var(--coral-400));
-  box-shadow: 0 8px 20px rgba(15, 143, 141, 0.3);
+  background: linear-gradient(135deg, var(--indigo-500), var(--coral-400));
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
 }
 
 .brandName {
@@ -51,19 +51,19 @@
 }
 
 .primaryButton {
-  background: var(--teal-500);
+  background: var(--indigo-500);
   color: #ffffff;
   border: none;
   padding: 10px 16px;
   border-radius: 12px;
   font-size: 13px;
   cursor: pointer;
-  box-shadow: 0 12px 24px rgba(15, 143, 141, 0.2);
+  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.2);
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .primaryButton:hover {
-  background: var(--teal-700);
+  background: var(--indigo-700);
   transform: translateY(-1px);
 }
 
@@ -79,7 +79,7 @@
 
 .ghostButton {
   background: transparent;
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
   color: var(--ink-900);
   padding: 10px 16px;
   border-radius: 12px;
@@ -113,7 +113,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 11px;
-  color: var(--teal-700);
+  color: var(--indigo-700);
   font-weight: 600;
 }
 
@@ -140,7 +140,7 @@
 .metaRow span {
   padding: 6px 10px;
   border-radius: 999px;
-  background: var(--sand-100);
+  background: var(--warm-100);
 }
 
 .heroPanel {
@@ -189,7 +189,7 @@
 
 .tabButton,
 .tabActive {
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
   border-radius: 999px;
   padding: 6px 12px;
   font-size: 12px;
@@ -198,8 +198,8 @@
 }
 
 .tabActive {
-  background: rgba(15, 143, 141, 0.16);
-  color: var(--teal-700);
+  background: rgba(99, 102, 241, 0.16);
+  color: var(--indigo-700);
   font-weight: 600;
 }
 
@@ -224,7 +224,7 @@
 .markdownBody table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
   border-radius: 8px;
   overflow: hidden;
   display: block;
@@ -233,14 +233,14 @@
 }
 
 .markdownBody thead {
-  background: rgba(15, 143, 141, 0.08);
+  background: rgba(99, 102, 241, 0.08);
 }
 
 .markdownBody th,
 .markdownBody td {
   text-align: left;
   padding: 8px 10px;
-  border-bottom: 1px solid var(--sand-200);
+  border-bottom: 1px solid var(--warm-200);
   font-size: 12px;
   color: var(--ink-900);
 }
@@ -258,7 +258,7 @@
 .tagRow span {
   padding: 6px 10px;
   border-radius: 999px;
-  background: var(--sand-100);
+  background: var(--warm-100);
   font-size: 11px;
   color: var(--ink-700);
 }
@@ -304,7 +304,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--teal-500);
+  background: var(--indigo-500);
   flex-shrink: 0;
   /* Align with the first line of text */
   margin-top: 7px;
@@ -347,8 +347,8 @@
   height: 40px;
   flex-shrink: 0;
   border-radius: 12px;
-  background: rgba(15, 143, 141, 0.1);
-  color: var(--teal-700);
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--indigo-700);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -374,8 +374,8 @@
 }
 
 .docsCard {
-  background: var(--sand-50, #f9f8f6);
-  border: 1px solid var(--sand-200);
+  background: var(--warm-50, #fefbf6);
+  border: 1px solid var(--warm-200);
   border-radius: 14px;
   padding: 16px;
 }
@@ -419,7 +419,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--teal-500);
+  background: var(--indigo-500);
   flex-shrink: 0;
   margin-top: 6px;
 }
@@ -518,7 +518,7 @@
     margin-bottom: 14px;
     font-size: 13.5px;
     font-weight: 600;
-    color: var(--teal-700);
+    color: var(--indigo-700);
     text-decoration: none;
   }
 
@@ -604,8 +604,8 @@
     margin-top: 8px;
     padding: 5px 10px;
     border-radius: 999px;
-    background: rgba(15, 143, 141, 0.1);
-    color: var(--teal-700);
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--indigo-700);
     font-size: 12px;
     font-weight: 600;
   }
@@ -679,7 +679,7 @@
     background: rgba(255, 255, 255, 0.96);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-top: 1px solid var(--sand-200);
+    border-top: 1px solid var(--warm-200);
     box-shadow: 0 -8px 24px -8px rgba(15, 34, 52, 0.08);
   }
 
@@ -692,7 +692,7 @@
     justify-content: center;
     border-radius: 14px;
     background: #ffffff;
-    border: 1px solid var(--sand-200);
+    border: 1px solid var(--warm-200);
     color: var(--ink-700);
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
@@ -708,9 +708,9 @@
   }
 
   .mobileStickyBookmarkActive {
-    background: rgba(15, 143, 141, 0.12);
-    border-color: rgba(15, 143, 141, 0.28);
-    color: var(--teal-700);
+    background: rgba(99, 102, 241, 0.12);
+    border-color: rgba(99, 102, 241, 0.28);
+    color: var(--indigo-700);
   }
 
   .mobileStickyApply {
@@ -721,12 +721,12 @@
     height: 46px;
     border: none;
     border-radius: 14px;
-    background: var(--teal-500);
+    background: var(--indigo-500);
     color: #ffffff;
     font-size: 14.5px;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 8px 20px rgba(15, 143, 141, 0.3);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
     transition: background 0.2s ease, transform 0.15s ease;
   }
 
@@ -735,6 +735,6 @@
   }
 
   .mobileStickyApply:hover {
-    background: var(--teal-700);
+    background: var(--indigo-700);
   }
 }

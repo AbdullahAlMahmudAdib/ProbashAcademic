@@ -111,14 +111,14 @@ function bumpAnonUsage(): number {
 const WELCOME_USER: ChatMessage = {
   role: "assistant",
   content:
-    "Hi! I'm your BairePorbo Mentor. I can help you find scholarships, check eligibility, and build an application strategy.\n\nType your question below and press **Enter** to send. What program are you aiming for?",
+    "Hi! I'm your ProbashAcademic Mentor. I can help you find scholarships, check eligibility, and build an application strategy.\n\nType your question below and press **Enter** to send. What program are you aiming for?",
   time: formatTime(new Date()),
 };
 
 const WELCOME_ANON: ChatMessage = {
   role: "assistant",
   content:
-    `Hi! I'm your BairePorbo Mentor. You have **${ANON_DAILY_LIMIT} free messages** today — no signup needed.\n\nAsk me anything about scholarships, eligibility, or applications. Type below and press **Enter** to send.`,
+    `Hi! I'm your ProbashAcademic Mentor. You have **${ANON_DAILY_LIMIT} free messages** today — no signup needed.\n\nAsk me anything about scholarships, eligibility, or applications. Type below and press **Enter** to send.`,
   time: formatTime(new Date()),
 };
 
@@ -510,9 +510,9 @@ function ChatContent() {
           <div className={styles.sidebarHeader}>
             <div className={styles.sidebarBrandRow}>
               <Link href="/" className={styles.brand} style={{ textDecoration: 'none', color: 'inherit' }}>
-                <Image src="/logo.png" alt="BairePorbo Logo" width={30} height={30} className={styles.brandLogo} />
+                <Image src="/logo.png" alt="ProbashAcademic Logo" width={30} height={30} className={styles.brandLogo} />
                 <div>
-                  <p className={styles.brandName}>BairePorbo</p>
+                  <p className={styles.brandName}>ProbashAcademic</p>
                   <span className={styles.brandTag}>AI Mentor</span>
                 </div>
               </Link>

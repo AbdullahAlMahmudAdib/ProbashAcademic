@@ -24,16 +24,16 @@ const bengaliFont = Hind_Siliguri({
   weight: ["400", "500", "600", "700"],
 });
 
-const BASE_URL = "https://baireporbo.app";
+const BASE_URL = "https://probashacademic.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "BairePorbo — AI Scholarship Guidance for Bangladeshi Students",
-    template: "%s | BairePorbo",
+    default: "ProbashAcademic — AI Scholarship Guidance for Bangladeshi Students",
+    template: "%s | ProbashAcademic",
   },
   description:
-    "BairePorbo helps Bangladeshi students find international scholarships with AI-powered summaries, eligibility breakdowns, and personalised prep timelines. Discover Masters, PhD, and Bachelor scholarships across USA, UK, Europe, and more.",
+    "ProbashAcademic helps Bangladeshi students find international scholarships with AI-powered summaries, eligibility breakdowns, and personalised prep timelines. Discover Masters, PhD, and Bachelor scholarships across USA, UK, Europe, and more.",
   keywords: [
     "scholarship Bangladesh",
     "study abroad Bangladesh",
@@ -43,10 +43,10 @@ export const metadata: Metadata = {
     "IELTS scholarship",
     "AI scholarship guidance",
     "higher study abroad",
-    "BairePorbo",
+    "ProbashAcademic",
   ],
-  authors: [{ name: "BairePorbo" }],
-  creator: "BairePorbo",
+  authors: [{ name: "ProbashAcademic" }],
+  creator: "ProbashAcademic",
   icons: {
     icon: [
       { url: "/logo.png", type: "image/png" },
@@ -60,8 +60,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "bn_BD",
     url: BASE_URL,
-    siteName: "BairePorbo",
-    title: "BairePorbo — AI Scholarship Guidance for Bangladeshi Students",
+    siteName: "ProbashAcademic",
+    title: "ProbashAcademic — AI Scholarship Guidance for Bangladeshi Students",
     description:
       "Find international scholarships with AI summaries and personalised prep timelines. Built for students from Bangladesh.",
     images: [
@@ -69,13 +69,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "BairePorbo — AI Scholarship Guidance",
+        alt: "ProbashAcademic — AI Scholarship Guidance",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BairePorbo — AI Scholarship Guidance",
+    title: "ProbashAcademic — AI Scholarship Guidance",
     description:
       "Find international scholarships with AI summaries and personalised prep timelines. Built for students from Bangladesh.",
     images: ["/og-image.png"],
@@ -112,11 +112,11 @@ export default async function RootLayout({
     <html lang={defaultLang} className={`${displayFont.variable} ${bodyFont.variable} ${bengaliFont.variable}`}>
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0f8f8d" />
+        <meta name="theme-color" content="#6366f1" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="BairePorbo" />
+        <meta name="apple-mobile-web-app-title" content="ProbashAcademic" />
         <link rel="apple-touch-icon" href="/logo.png" />
         <script
           async

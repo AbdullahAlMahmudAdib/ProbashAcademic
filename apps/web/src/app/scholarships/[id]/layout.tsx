@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { sql } from "@/utils/db";
 
-const BASE_URL = "https://baireporbo.app";
+const BASE_URL = "https://probashacademic.app";
 
 const FUNDING_MAP: Record<string, string> = {
   full: "Full funding",
@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     const rawDescription =
       (s.ai_summary as string | null) ??
-      `${level} scholarship in ${s.country} — ${funding}. Get AI-powered eligibility summaries and application tips on BairePorbo.`;
+      `${level} scholarship in ${s.country} — ${funding}. Get AI-powered eligibility summaries and application tips on ProbashAcademic.`;
     const description = truncateDescription(rawDescription);
 
     // Always use the slug URL as canonical (never the UUID)
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     const images = s.thumbnail_url
       ? [{ url: s.thumbnail_url as string, width: 1200, height: 630, alt: s.title as string }]
-      : [{ url: "/og-image.png", width: 1200, height: 630, alt: "BairePorbo" }];
+      : [{ url: "/og-image.png", width: 1200, height: 630, alt: "ProbashAcademic" }];
 
     return {
       title: `${s.title as string} (${s.country as string})`,
@@ -77,13 +77,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
       twitter: {
         card: "summary_large_image",
-        title: `${s.title as string} | BairePorbo`,
+        title: `${s.title as string} | ProbashAcademic`,
         description,
         images: images.map((img) => img.url),
       },
     };
   } catch {
-    return { title: "Scholarship | BairePorbo" };
+    return { title: "Scholarship | ProbashAcademic" };
   }
 }
 

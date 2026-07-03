@@ -135,7 +135,7 @@ export default function EditScholarshipPage({ params }: { params: Promise<{ id: 
 
       <form onSubmit={save} className={styles.formCard}>
         {/* Flagship toggle – shown at the very top for easy access */}
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, padding: "12px 16px", background: form.is_flagship ? "var(--amber-50, #fffbeb)" : "var(--sand-100, #f5f4f0)", border: `1.5px solid ${form.is_flagship ? "var(--amber-300, #fcd34d)" : "var(--sand-200, #e8e5dc)"}`, borderRadius: 10 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, padding: "12px 16px", background: form.is_flagship ? "var(--amber-50, #fffbeb)" : "var(--warm-100, #fff7ed)", border: `1.5px solid ${form.is_flagship ? "var(--amber-300, #fcd34d)" : "var(--warm-200, #fed7aa)"}`, borderRadius: 10 }}>
           <input
             type="checkbox"
             id="is_flagship"
@@ -152,11 +152,11 @@ export default function EditScholarshipPage({ params }: { params: Promise<{ id: 
         <div style={{ marginBottom: 24 }}>
           <p style={{ fontSize: 13, fontWeight: 600, color: "var(--ink-700)", marginBottom: 8 }}>Application Status *</p>
           <div style={{ display: "flex", gap: 12 }}>
-            <label style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer", padding: "10px 16px", borderRadius: 10, border: `2px solid ${form.is_live ? "var(--teal-500, #0f8f8d)" : "var(--sand-200, #e8e5dc)"}`, background: form.is_live ? "rgba(15, 143, 141, 0.06)" : "var(--sand-50, #faf9f6)", flex: 1, fontWeight: form.is_live ? 600 : 400, color: form.is_live ? "var(--teal-700)" : "var(--ink-600)", fontSize: 13 }}>
-              <input type="radio" name="edit_is_live" value="live" checked={form.is_live} onChange={() => setBool("is_live", true)} style={{ accentColor: "var(--teal-500)" }} />
+            <label style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer", padding: "10px 16px", borderRadius: 10, border: `2px solid ${form.is_live ? "var(--indigo-500, #6366f1)" : "var(--warm-200, #fed7aa)"}`, background: form.is_live ? "rgba(99, 102, 241, 0.08)" : "var(--warm-50, #fefbf6)", flex: 1, fontWeight: form.is_live ? 600 : 400, color: form.is_live ? "var(--indigo-700)" : "var(--ink-600)", fontSize: 13 }}>
+              <input type="radio" name="edit_is_live" value="live" checked={form.is_live} onChange={() => setBool("is_live", true)} style={{ accentColor: "var(--indigo-500)" }} />
               Open Now — applications currently live
             </label>
-            <label style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer", padding: "10px 16px", borderRadius: 10, border: `2px solid ${!form.is_live ? "var(--amber-400, #f59e0b)" : "var(--sand-200, #e8e5dc)"}`, background: !form.is_live ? "rgba(245, 158, 11, 0.06)" : "var(--sand-50, #faf9f6)", flex: 1, fontWeight: !form.is_live ? 600 : 400, color: !form.is_live ? "var(--amber-700, #b45309)" : "var(--ink-600)", fontSize: 13 }}>
+            <label style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer", padding: "10px 16px", borderRadius: 10, border: `2px solid ${!form.is_live ? "var(--amber-400, #f59e0b)" : "var(--warm-200, #fed7aa)"}`, background: !form.is_live ? "rgba(245, 158, 11, 0.06)" : "var(--warm-50, #fefbf6)", flex: 1, fontWeight: !form.is_live ? 600 : 400, color: !form.is_live ? "var(--amber-700, #b45309)" : "var(--ink-600)", fontSize: 13 }}>
               <input type="radio" name="edit_is_live" value="upcoming" checked={!form.is_live} onChange={() => setBool("is_live", false)} style={{ accentColor: "var(--amber-400)" }} />
               Opening Soon — not yet accepting applications
             </label>

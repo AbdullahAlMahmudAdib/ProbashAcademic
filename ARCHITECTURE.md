@@ -1,4 +1,4 @@
-# BairePorbo — Architecture
+# ProbashAcademic — Architecture
 
 AI-powered scholarship guidance platform for Bangladeshi students. This document
 describes how the system is built so future changes are easy to reason about.
@@ -9,7 +9,7 @@ describes how the system is built so future changes are easy to reason about.
 
 ## 1. High-level overview
 
-BairePorbo is a single **Next.js (App Router) web app** backed by **Supabase**
+ProbashAcademic is a single **Next.js (App Router) web app** backed by **Supabase**
 (Postgres + Auth + Storage) and two AI providers (**OpenRouter** for chat,
 **NVIDIA NIM** for embeddings + admin helpers). It is deployed on **Vercel** and
 is also installable as an Android app via a **TWA APK** generated from the PWA.
@@ -70,7 +70,7 @@ apps/web/
 │   ├── manifest.json           # PWA manifest
 │   ├── sw.js                   # service worker (offline shell)
 │   ├── offline.html            # offline fallback page
-│   ├── BairePorbo.apk          # downloadable Android app
+│   ├── ProbashAcademic.apk          # downloadable Android app
 │   ├── logo.png, og-image.png
 │   └── .well-known/assetlinks.json  # TWA digital asset link
 │
@@ -318,11 +318,11 @@ circuit breaker so a traffic spike can't drain the AI budget.
 - `public/sw.js` — service worker: cache-first shell, network-first for `/api/*`,
   offline fallback to `offline.html`. Registered via inline script in `layout.tsx`.
 - TWA APK generated locally with **Bubblewrap** (`bubblewrap init/build`),
-  package `app.baireporbo.twa`, signed with a keystore kept OUT of git
+  package `app.probashacademic.twa`, signed with a keystore kept OUT of git
   (`.gitignore` excludes `*.keystore`/`*.jks`).
 - `public/.well-known/assetlinks.json` — must contain the APK signing key's
   SHA256 fingerprint for the TWA to drop browser chrome.
-- The APK is hosted at `/BairePorbo.apk`. The home page shows an Android-only
+- The APK is hosted at `/ProbashAcademic.apk`. The home page shows an Android-only
   install banner (`AndroidBanner` in `page.tsx`).
 
 ---

@@ -18,7 +18,7 @@ services:
     environment:
       POSTGRES_USER: ${DB_USER:-postgres}
       POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres_password}
-      POSTGRES_DB: ${DB_NAME:-baireporbo}
+      POSTGRES_DB: ${DB_NAME:-probashacademic}
     ports:
       - "${DB_PORT:-5432}:5432"
     volumes:

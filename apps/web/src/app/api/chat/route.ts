@@ -6,7 +6,7 @@ import { fetchOpenRouterChatWithFallback } from "@/lib/openrouter";
 import { checkChatRateLimit, formatResetWindow, type ChatTier } from "@/lib/rate-limit";
 import { lookupPromptCache, writePromptCache } from "@/lib/prompt-cache";
 
-const SYSTEM_PROMPT = `You are BairePorbo Mentor, an expert AI advisor for Bangladeshi students pursuing higher education and scholarships abroad. You have deep knowledge of:
+const SYSTEM_PROMPT = `You are ProbashAcademic Mentor, an expert AI advisor for Bangladeshi students pursuing higher education and scholarships abroad. You have deep knowledge of:
 - International scholarships (DAAD, Erasmus Mundus, Commonwealth, Chevening, Fulbright, etc.)
 - University admission requirements and processes
 - CGPA/GPA requirements, English proficiency tests (IELTS, TOEFL, Duolingo)
@@ -35,7 +35,7 @@ const rateLimitMessage = (
 ): string => {
   const reset = formatResetWindow(resetMs);
   if (scope === "global") {
-    return `BairePorbo Mentor is at capacity right now. Please retry in ${reset}.`;
+    return `ProbashAcademic Mentor is at capacity right now. Please retry in ${reset}.`;
   }
   if (tier === "anonymous") {
     return `You've reached the free trial limit. Sign in to keep chatting.`;

@@ -247,7 +247,7 @@ export default async function ScholarshipDetailPage({ params }: Props) {
                   className={styles.docsBadge}
                   style={{
                     background: "rgba(15,143,141,0.12)",
-                    color: "var(--teal-700)",
+                    color: "var(--indigo-700)",
                   }}
                 >
                   Core

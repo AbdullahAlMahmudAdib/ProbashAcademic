@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import LegalLayout, { LegalSection } from "../legal-layout";
 
-const SUPPORT_EMAIL = "support@baireporbo.app";
-const FACEBOOK_URL = "https://www.facebook.com/baireporbo/";
+const SUPPORT_EMAIL = "support@probashacademic.app";
+const FACEBOOK_URL = "https://www.facebook.com/probashacademic/";
 
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with the BairePorbo team for support, feedback, or partnership inquiries.",
+    "Get in touch with the ProbashAcademic team for support, feedback, or partnership inquiries.",
 };
 
 const sections: LegalSection[] = [
@@ -67,7 +67,7 @@ const sections: LegalSection[] = [
           </li>
           <li>
             <strong>Feedback</strong> — Feature ideas, bug reports, or anything
-            that would make BairePorbo more useful for you.
+            that would make ProbashAcademic more useful for you.
           </li>
           <li>
             <strong>Partnerships</strong> — Universities, NGOs, or organisations

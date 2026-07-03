@@ -23,7 +23,7 @@
 .page::before {
   top: -150px;
   right: -100px;
-  background: radial-gradient(circle, rgba(15, 143, 141, 0.5), rgba(15, 143, 141, 0));
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.5), rgba(99, 102, 241, 0));
 }
 
 .page::after {
@@ -57,7 +57,7 @@
   letter-spacing: 2px;
   font-size: 11px;
   font-weight: 700;
-  color: var(--teal-700);
+  color: var(--indigo-700);
 }
 
 .hero h1 {
@@ -77,8 +77,10 @@
 .disclaimer {
   margin-top: 12px;
   padding: 14px 16px;
-  background: rgba(15, 143, 141, 0.05);
-  border: 1px solid rgba(15, 143, 141, 0.15);
+  background: var(--glass-bg);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-md);
   font-size: 13px;
   line-height: 1.55;
@@ -98,8 +100,10 @@
   flex-direction: column;
   gap: 10px;
   padding: 16px;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid var(--sand-200);
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
   border-radius: 16px;
   font-size: 13px;
 }
@@ -122,7 +126,7 @@
 }
 
 .tocLink:hover {
-  color: var(--teal-700);
+  color: var(--indigo-700);
 }
 
 /* ── Article ── */
@@ -176,13 +180,13 @@
 }
 
 .section a {
-  color: var(--teal-700);
+  color: var(--indigo-700);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .section a:hover {
-  color: var(--teal-500);
+  color: var(--indigo-500);
 }
 
 .section code {
@@ -190,9 +194,9 @@
   font-size: 13px;
   padding: 2px 6px;
   border-radius: 5px;
-  background: rgba(15, 143, 141, 0.08);
-  color: var(--teal-700);
-  border: 1px solid rgba(15, 143, 141, 0.18);
+  background: rgba(99, 102, 241, 0.08);
+  color: var(--indigo-700);
+  border: 1px solid rgba(99, 102, 241, 0.18);
 }
 
 .contactCard {
@@ -200,10 +204,10 @@
   padding: 18px 20px;
   background: linear-gradient(
     135deg,
-    rgba(15, 143, 141, 0.06),
+    rgba(99, 102, 241, 0.08),
     rgba(240, 138, 104, 0.05)
   );
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
   border-radius: 14px;
 }
 
@@ -216,7 +220,7 @@
 
 .contactCard a {
   font-weight: 700;
-  color: var(--teal-700);
+  color: var(--indigo-700);
   text-decoration: none;
 }
 

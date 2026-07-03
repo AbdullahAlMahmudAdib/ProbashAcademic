@@ -29,7 +29,7 @@
 .page::after {
   bottom: -200px;
   left: -140px;
-  background: radial-gradient(circle, rgba(15, 143, 141, 0.55), rgba(15, 143, 141, 0));
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.55), rgba(99, 102, 241, 0));
 }
 
 .main {
@@ -43,7 +43,7 @@
 .skeleton {
   padding: 60px;
   background: rgba(255, 255, 255, 0.7);
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
   border-radius: 18px;
   text-align: center;
   color: var(--ink-500);
@@ -67,9 +67,9 @@
   border-radius: 8px;
   background: linear-gradient(
     90deg,
-    rgba(15, 143, 141, 0.06) 0%,
-    rgba(15, 143, 141, 0.14) 40%,
-    rgba(15, 143, 141, 0.06) 80%
+    rgba(99, 102, 241, 0.06) 0%,
+    rgba(99, 102, 241, 0.14) 40%,
+    rgba(99, 102, 241, 0.06) 80%
   );
   background-size: 600px 100%;
   animation: shimmer 1.4s ease-in-out infinite;
@@ -79,13 +79,13 @@
   border-radius: 20px;
   background: linear-gradient(
     90deg,
-    rgba(15, 143, 141, 0.05) 0%,
-    rgba(15, 143, 141, 0.11) 40%,
-    rgba(15, 143, 141, 0.05) 80%
+    rgba(99, 102, 241, 0.05) 0%,
+    rgba(99, 102, 241, 0.11) 40%,
+    rgba(99, 102, 241, 0.05) 80%
   );
   background-size: 600px 100%;
   animation: shimmer 1.4s ease-in-out infinite;
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
 }
 
 /* ── Mobile segmented control ── */
@@ -132,7 +132,7 @@
   letter-spacing: 2px;
   font-size: 11px;
   font-weight: 700;
-  color: var(--teal-700);
+  color: var(--indigo-700);
 }
 
 .kickerLight {
@@ -163,9 +163,11 @@
   gap: 20px;
   padding: 22px 24px;
   border-radius: 22px;
-  border: 1px solid var(--sand-200);
-  background: #ffffff;
-  box-shadow: 0 14px 32px -12px rgba(15, 143, 141, 0.18);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-glass);
   overflow: hidden;
 }
 
@@ -176,7 +178,7 @@
   pointer-events: none;
   background: linear-gradient(
     135deg,
-    rgba(15, 143, 141, 0.06) 0%,
+    rgba(99, 102, 241, 0.06) 0%,
     rgba(240, 138, 104, 0.06) 100%
   );
 }
@@ -195,7 +197,7 @@
   letter-spacing: 1.5px;
   font-size: 10.5px;
   font-weight: 700;
-  color: var(--teal-700);
+  color: var(--indigo-700);
 }
 
 .actionCard h2 {
@@ -221,7 +223,7 @@
   gap: 6px;
   padding: 11px 20px;
   border-radius: 999px;
-  background: var(--teal-500);
+  background: var(--indigo-500);
   color: #ffffff;
   font-size: 13.5px;
   font-weight: 600;
@@ -231,7 +233,7 @@
 }
 
 .actionCta:hover {
-  background: var(--teal-700);
+  background: var(--indigo-700);
   transform: translateY(-1px);
 }
 
@@ -261,26 +263,28 @@
 }
 
 .action_profile .actionLabel {
-  color: var(--teal-700);
+  color: var(--indigo-700);
 }
 
 .action_explore .actionLabel,
 .action_fresh .actionLabel,
 .action_default .actionLabel {
-  color: var(--teal-700);
+  color: var(--indigo-700);
 }
 
 /* ── Generic panel ── */
 .panel {
   position: relative;
-  background: #ffffff;
-  border: 1px solid var(--sand-200);
+  background: var(--glass-bg);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid var(--glass-border);
   border-radius: 20px;
   padding: 22px 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  box-shadow: 0 4px 18px rgba(15, 34, 52, 0.05);
+  box-shadow: var(--shadow-glass);
 }
 
 .panelHeader {
@@ -301,7 +305,7 @@
 .linkButton {
   background: transparent;
   border: none;
-  color: var(--teal-700);
+  color: var(--indigo-700);
   font-size: 12.5px;
   font-weight: 600;
   cursor: pointer;
@@ -319,7 +323,7 @@
 }
 
 .linkInline {
-  color: var(--teal-700);
+  color: var(--indigo-700);
   font-weight: 600;
   text-decoration: none;
 }
@@ -384,8 +388,8 @@
 }
 
 .matchItem:hover {
-  background: var(--sand-100, #f7f3ee);
-  border-color: var(--sand-200);
+  background: var(--warm-100, #f7f3ee);
+  border-color: var(--warm-200);
   transform: translateY(-1px);
 }
 
@@ -393,7 +397,7 @@
   width: 44px;
   height: 44px;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--teal-500), var(--coral-400));
+  background: linear-gradient(135deg, var(--indigo-500), var(--coral-400));
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -445,7 +449,7 @@
 }
 
 .matchItem:hover .matchArrow {
-  color: var(--teal-700);
+  color: var(--indigo-700);
   transform: translateX(2px);
 }
 
@@ -455,8 +459,8 @@
   gap: 8px;
   padding: 14px 16px;
   border-radius: 12px;
-  background: var(--sand-100, #f7f3ee);
-  border: 1px dashed var(--sand-200);
+  background: var(--warm-100, #f7f3ee);
+  border: 1px dashed var(--warm-200);
   font-size: 13px;
   color: var(--ink-500);
   line-height: 1.55;
@@ -482,7 +486,7 @@
   gap: 16px;
   padding: 12px 14px;
   border-radius: 12px;
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
   background: #ffffff;
   text-decoration: none;
   color: inherit;
@@ -491,8 +495,8 @@
 
 .deadlineItem:hover {
   transform: translateY(-1px);
-  border-color: var(--teal-500);
-  box-shadow: 0 8px 22px rgba(15, 143, 141, 0.1);
+  border-color: var(--indigo-500);
+  box-shadow: 0 8px 22px rgba(99, 102, 241, 0.1);
 }
 
 .deadlineItem h4 {
@@ -513,9 +517,9 @@
   flex-shrink: 0;
   padding: 4px 10px;
   border-radius: 999px;
-  background: rgba(15, 143, 141, 0.1);
-  border: 1px solid rgba(15, 143, 141, 0.2);
-  color: var(--teal-700);
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  color: var(--indigo-700);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.4px;
@@ -536,7 +540,7 @@
 .progressTrack {
   width: 100%;
   height: 8px;
-  background: rgba(15, 143, 141, 0.08);
+  background: rgba(99, 102, 241, 0.08);
   border-radius: 999px;
   overflow: hidden;
 }
@@ -545,7 +549,7 @@
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--teal-500), var(--coral-400));
+  background: linear-gradient(90deg, var(--indigo-500), var(--coral-400));
   transition: width 0.4s ease;
 }
 
@@ -558,7 +562,7 @@
   margin-top: 4px;
   padding: 11px 18px;
   border-radius: 12px;
-  background: var(--teal-500);
+  background: var(--indigo-500);
   color: #ffffff;
   font-size: 13.5px;
   font-weight: 600;
@@ -568,7 +572,7 @@
 }
 
 .profileCta:hover {
-  background: var(--teal-700);
+  background: var(--indigo-700);
   transform: translateY(-1px);
 }
 
@@ -580,7 +584,7 @@
   margin-top: 2px;
   padding: 9px 16px;
   border-radius: 12px;
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
   background: transparent;
   color: var(--ink-500);
   font-size: 13px;
@@ -604,8 +608,8 @@
   gap: 16px;
   padding: 14px 16px;
   border-radius: 14px;
-  background: var(--sand-100, #f7f3ee);
-  border: 1px solid var(--sand-200);
+  background: var(--warm-100, #f7f3ee);
+  border: 1px solid var(--warm-200);
   text-decoration: none;
   color: inherit;
   transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
@@ -613,7 +617,7 @@
 
 .lastSessionItem:hover {
   background: #ffffff;
-  border-color: var(--teal-500);
+  border-color: var(--indigo-500);
   transform: translateY(-1px);
 }
 
@@ -658,7 +662,7 @@
   gap: 6px;
   padding: 14px;
   border-radius: 14px;
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
   background: #ffffff;
   text-decoration: none;
   color: inherit;
@@ -668,7 +672,7 @@
 
 .bookmarkCard:hover {
   transform: translateY(-2px);
-  border-color: var(--teal-500);
+  border-color: var(--indigo-500);
 }
 
 .bookmarkCard h4 {
@@ -732,7 +736,7 @@
     align-items: center;
     gap: 4px;
     padding: 4px;
-    background: rgba(15, 143, 141, 0.08);
+    background: rgba(99, 102, 241, 0.08);
     border-radius: 999px;
     margin: -4px 0 4px;
   }

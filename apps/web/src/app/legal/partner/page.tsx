@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 import LegalLayout, { LegalSection } from "../legal-layout";
 
-const SUPPORT_EMAIL = "support@baireporbo.app";
+const SUPPORT_EMAIL = "support@probashacademic.app";
 
 export const metadata: Metadata = {
   title: "Partner With Us",
   description:
-    "Partner with BairePorbo — collaborate with Bangladesh's growing scholarship discovery platform. We welcome universities, scholarship providers, EdTech companies, and student communities.",
+    "Partner with ProbashAcademic — collaborate with Bangladesh's growing scholarship discovery platform. We welcome universities, scholarship providers, EdTech companies, and student communities.",
   alternates: {
-    canonical: "https://baireporbo.app/legal/partner",
+    canonical: "https://probashacademic.app/legal/partner",
   },
   openGraph: {
-    title: "Partner With Us | BairePorbo",
+    title: "Partner With Us | ProbashAcademic",
     description:
-      "Reach thousands of motivated Bangladeshi students. Partner with BairePorbo for sponsorships, scholarship listings, and collaboration opportunities.",
-    url: "https://baireporbo.app/legal/partner",
+      "Reach thousands of motivated Bangladeshi students. Partner with ProbashAcademic for sponsorships, scholarship listings, and collaboration opportunities.",
+    url: "https://probashacademic.app/legal/partner",
     type: "website",
   },
 };
@@ -26,7 +26,7 @@ const sections: LegalSection[] = [
     body: (
       <>
         <p>
-          BairePorbo serves thousands of motivated Bangladeshi students actively
+          ProbashAcademic serves thousands of motivated Bangladeshi students actively
           exploring international study opportunities. Our platform is where they
           discover scholarships, read eligibility breakdowns, and plan their
           higher education journey abroad.
@@ -54,7 +54,7 @@ const sections: LegalSection[] = [
                 fontFamily: "var(--font-display), sans-serif",
                 fontSize: "clamp(1.8rem, 4vw, 2.4rem)",
                 fontWeight: 700,
-                color: "var(--teal-600)",
+                color: "var(--indigo-600)",
                 letterSpacing: "-1px",
                 lineHeight: 1,
               }}
@@ -129,7 +129,7 @@ const sections: LegalSection[] = [
           </div>
         </div>
         <p style={{ marginTop: "16px" }}>
-          These numbers grow every month as more students discover BairePorbo
+          These numbers grow every month as more students discover ProbashAcademic
           through search, social media, and word of mouth within Bangladesh&apos;s
           higher education community.
         </p>
@@ -242,7 +242,7 @@ export default function PartnerPage() {
       title="Partner with us"
       intro={
         <p>
-          <strong>BairePorbo</strong> helps students discover scholarships,
+          <strong>ProbashAcademic</strong> helps students discover scholarships,
           fellowships, and higher education opportunities from around the world. We
           welcome collaboration with universities, scholarship providers, and
           organisations that want to reach motivated students from Bangladesh.

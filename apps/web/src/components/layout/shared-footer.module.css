@@ -3,7 +3,7 @@
   z-index: 1;
   width: 100%;
   padding-top: 48px;
-  border-top: 1px solid var(--sand-200);
+  border-top: 1px solid var(--warm-200);
   margin-top: 32px;
 }
 
@@ -81,7 +81,7 @@
 
 .footerCol a:hover,
 .footerEmail:hover {
-  color: var(--teal-700);
+  color: var(--indigo-700);
 }
 
 .footerEmail {

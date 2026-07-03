@@ -165,18 +165,18 @@
 .dupViewBtn {
   font-size: 12.5px;
   font-weight: 600;
-  color: var(--teal-600, #0d7a79);
+  color: var(--indigo-600, #4338ca);
   text-decoration: none;
   white-space: nowrap;
   padding: 5px 10px;
   border-radius: 8px;
-  background: rgba(15, 143, 141, 0.08);
-  border: 1px solid rgba(15, 143, 141, 0.2);
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.2);
   transition: background 0.15s;
   flex-shrink: 0;
 }
 .dupViewBtn:hover {
-  background: rgba(15, 143, 141, 0.15);
+  background: rgba(99, 102, 241, 0.15);
 }
 
 .dupFooter {
@@ -189,7 +189,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--teal-600, #0d7a79);
+  color: var(--indigo-600, #4338ca);
   font-size: 12.5px;
   font-weight: 600;
   padding: 0;
@@ -197,5 +197,5 @@
   text-underline-offset: 2px;
 }
 .dupProceedLink:hover {
-  color: var(--teal-700, #0a6b6a);
+  color: var(--indigo-700, #3730a3);
 }

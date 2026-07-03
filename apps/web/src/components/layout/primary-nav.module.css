@@ -19,12 +19,12 @@
 }
 
 .nav a:hover {
-  background: radial-gradient(ellipse at center, rgba(15, 143, 141, 0.12) 0%, transparent 75%);
-  color: var(--teal-600);
+  background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.12) 0%, transparent 75%);
+  color: var(--indigo-600);
 }
 
 .nav a:active {
-  background: radial-gradient(ellipse at center, rgba(15, 143, 141, 0.18) 0%, transparent 75%);
+  background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.18) 0%, transparent 75%);
 }
 
 .vertical a {
@@ -32,8 +32,8 @@
 }
 
 .active {
-  background: radial-gradient(ellipse at center, rgba(15, 143, 141, 0.22) 0%, transparent 75%);
-  color: var(--teal-600);
+  background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.22) 0%, transparent 75%);
+  color: var(--indigo-600);
   font-weight: 500;
 }
 

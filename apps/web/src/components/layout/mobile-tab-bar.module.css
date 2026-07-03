@@ -17,7 +17,7 @@
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-top: 1px solid var(--sand-200);
+    border-top: 1px solid var(--warm-200);
     box-shadow: 0 -8px 24px -8px rgba(15, 34, 52, 0.08);
   }
 }
@@ -59,7 +59,7 @@
 }
 
 .tabActive {
-  color: var(--teal-700);
+  color: var(--indigo-700);
   position: relative;
 }
 
@@ -74,7 +74,7 @@
   width: 18px;
   height: 3px;
   border-radius: 999px;
-  background: var(--teal-500);
+  background: var(--indigo-500);
 }
 
 .tabLabel {

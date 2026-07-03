@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PrimaryNav from "@/components/layout/primary-nav";
 import LangToggle from "@/components/layout/lang-toggle";
 import { useT } from "@/lib/lang-context";
@@ -21,15 +21,23 @@ type AppNavbarProps = {
 
 export default function AppNavbar({ actions = [] }: AppNavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const t = useT();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className={styles.nav}>
+    <header className={`${styles.nav}${scrolled ? ` ${styles.scrolled}` : ""}`}>
       <Link href="/" className={styles.brand} style={{ textDecoration: 'none', color: 'inherit' }}>
-        <Image src="/logo.png" alt="BairePorbo Logo" width={28} height={28} className={styles.brandLogo} />
-        <span>BairePorbo</span>
+        <Image src="/logo.png" alt="ProbashAcademic Logo" width={28} height={28} className={styles.brandLogo} />
+        <span>ProbashAcademic</span>
       </Link>
       <PrimaryNav className={styles.navLinks} />
       <button

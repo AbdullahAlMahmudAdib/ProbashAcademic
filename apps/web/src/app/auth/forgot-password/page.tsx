@@ -93,8 +93,8 @@ function ForgotPasswordForm() {
     <div className={styles.page}>
       <div className={styles.card}>
         <div className={styles.logo}>
-          <Image src="/logo.png" alt="BairePorbo Logo" width={28} height={28} className={styles.logoImage} />
-          <span className={styles.logoText}>BairePorbo</span>
+          <Image src="/logo.png" alt="ProbashAcademic Logo" width={28} height={28} className={styles.logoImage} />
+          <span className={styles.logoText}>ProbashAcademic</span>
         </div>
 
         {step === "email" && (
@@ -147,7 +147,7 @@ function ForgotPasswordForm() {
             </form>
             <p className={styles.switchLink}>
               Wrong email?{" "}
-              <button type="button" style={{ background: "none", border: "none", color: "var(--teal-600)", cursor: "pointer", padding: 0 }} onClick={() => { setStep("email"); setError(null); }}>
+              <button type="button" style={{ background: "none", border: "none", color: "var(--indigo-600)", cursor: "pointer", padding: 0 }} onClick={() => { setStep("email"); setError(null); }}>
                 Go back
               </button>
             </p>

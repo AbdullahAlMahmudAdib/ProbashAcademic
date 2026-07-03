@@ -3,7 +3,7 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "app.baireporbo.twa",
+      "package_name": "app.probashacademic.twa",
       "sha256_cert_fingerprints": [
         "1A:7C:43:BC:8A:09:C4:69:25:46:D7:BC:FA:D6:9E:06:39:75:37:EE:54:BC:52:1A:9D:95:E2:58:7D:E1:F5:08"
       ]

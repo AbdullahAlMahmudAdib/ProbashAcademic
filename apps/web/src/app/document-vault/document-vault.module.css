@@ -22,7 +22,7 @@
 .page::before {
   top: -160px;
   right: -120px;
-  background: radial-gradient(circle, rgba(15, 143, 141, 0.6), rgba(15, 143, 141, 0));
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.6), rgba(99, 102, 241, 0));
 }
 
 .page::after {
@@ -54,7 +54,7 @@
   letter-spacing: 2px;
   font-size: 11px;
   font-weight: 700;
-  color: var(--teal-700);
+  color: var(--indigo-700);
 }
 
 .hero h1 {
@@ -80,10 +80,12 @@
   flex-direction: column;
   gap: 16px;
   padding: 22px 24px;
-  background: #ffffff;
-  border: 1px solid var(--sand-200);
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
   border-radius: 18px;
-  box-shadow: 0 4px 16px rgba(15, 34, 52, 0.04);
+  box-shadow: var(--shadow-glass);
 }
 
 .dropzone {
@@ -93,9 +95,9 @@
   justify-content: center;
   gap: 10px;
   padding: 36px 24px;
-  border: 2px dashed var(--sand-200);
+  border: 2px dashed var(--warm-200);
   border-radius: 14px;
-  background: var(--sand-100);
+  background: var(--warm-100);
   cursor: pointer;
   transition: border-color 0.2s ease, background 0.2s ease;
   text-align: center;
@@ -103,14 +105,14 @@
 
 .dropzone:hover,
 .dropzoneDrag {
-  border-color: var(--teal-500);
-  background: rgba(15, 143, 141, 0.04);
+  border-color: var(--indigo-500);
+  background: rgba(99, 102, 241, 0.04);
 }
 
 .dropzoneIcon {
   font-size: 32px;
   line-height: 1;
-  color: var(--teal-500);
+  color: var(--indigo-500);
 }
 
 .dropzoneText {
@@ -130,9 +132,9 @@
   font: inherit;
   font-size: 13px;
   font-weight: 600;
-  color: var(--teal-700);
-  background: rgba(15, 143, 141, 0.08);
-  border: 1px solid rgba(15, 143, 141, 0.2);
+  color: var(--indigo-700);
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.2);
   border-radius: 8px;
   padding: 7px 16px;
   cursor: pointer;
@@ -140,7 +142,7 @@
 }
 
 .browseBtn:hover {
-  background: rgba(15, 143, 141, 0.14);
+  background: rgba(99, 102, 241, 0.14);
 }
 
 .acceptedHint {
@@ -171,14 +173,14 @@
 .progressTrack {
   width: 100%;
   height: 6px;
-  background: var(--sand-200);
+  background: var(--warm-200);
   border-radius: 999px;
   overflow: hidden;
 }
 
 .progressFill {
   height: 100%;
-  background: linear-gradient(90deg, var(--teal-500), var(--teal-700));
+  background: linear-gradient(90deg, var(--indigo-500), var(--indigo-700));
   border-radius: 999px;
   transition: width 0.3s ease;
 }
@@ -192,7 +194,7 @@
 
 .uploadSuccess {
   font-size: 12px;
-  color: var(--teal-700);
+  color: var(--indigo-700);
   font-weight: 500;
   margin: 0;
 }
@@ -211,7 +213,7 @@
   font-weight: 600;
   color: var(--ink-500);
   background: #ffffff;
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
   border-radius: 999px;
   padding: 6px 14px;
   cursor: pointer;
@@ -219,19 +221,19 @@
 }
 
 .filterChip:hover {
-  border-color: var(--teal-500);
-  color: var(--teal-700);
+  border-color: var(--indigo-500);
+  color: var(--indigo-700);
 }
 
 .filterChipActive {
-  background: var(--teal-500);
+  background: var(--indigo-500);
   color: #ffffff;
-  border-color: var(--teal-500);
+  border-color: var(--indigo-500);
 }
 
 .filterChipActive:hover {
-  background: var(--teal-700);
-  border-color: var(--teal-700);
+  background: var(--indigo-700);
+  border-color: var(--indigo-700);
   color: #ffffff;
 }
 
@@ -248,15 +250,17 @@
   flex-direction: column;
   gap: 12px;
   padding: 16px;
-  background: #ffffff;
-  border: 1px solid var(--sand-200);
+  background: var(--glass-bg);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid var(--glass-border);
   border-radius: 14px;
-  box-shadow: 0 2px 8px rgba(15, 34, 52, 0.04);
+  box-shadow: var(--shadow-glass);
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .docCard:hover {
-  border-color: rgba(15, 143, 141, 0.3);
+  border-color: rgba(99, 102, 241, 0.3);
   box-shadow: 0 4px 16px rgba(15, 34, 52, 0.08);
 }
 
@@ -275,8 +279,8 @@
   justify-content: center;
   border-radius: 10px;
   font-size: 18px;
-  background: rgba(15, 143, 141, 0.08);
-  color: var(--teal-700);
+  background: rgba(99, 102, 241, 0.08);
+  color: var(--indigo-700);
 }
 
 .docInfo {
@@ -304,9 +308,9 @@
   font: inherit;
   font-size: 11.5px;
   font-weight: 500;
-  color: var(--teal-700);
-  background: rgba(15, 143, 141, 0.06);
-  border: 1px solid rgba(15, 143, 141, 0.15);
+  color: var(--indigo-700);
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.15);
   border-radius: 6px;
   padding: 4px 8px;
   cursor: pointer;
@@ -314,7 +318,7 @@
 }
 
 .docCategorySelect:focus {
-  border-color: var(--teal-500);
+  border-color: var(--indigo-500);
 }
 
 .docActions {
@@ -334,13 +338,13 @@
 }
 
 .docDownload {
-  color: var(--teal-700);
-  background: rgba(15, 143, 141, 0.08);
-  border: 1px solid rgba(15, 143, 141, 0.18);
+  color: var(--indigo-700);
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.18);
 }
 
 .docDownload:hover {
-  background: rgba(15, 143, 141, 0.15);
+  background: rgba(99, 102, 241, 0.15);
 }
 
 .docDelete {
@@ -384,7 +388,7 @@
   gap: 8px;
   padding: 14px 18px;
   background: #ffffff;
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
   border-radius: 12px;
 }
 
@@ -399,14 +403,14 @@
 .storageTrack {
   width: 100%;
   height: 5px;
-  background: var(--sand-200);
+  background: var(--warm-200);
   border-radius: 999px;
   overflow: hidden;
 }
 
 .storageFill {
   height: 100%;
-  background: linear-gradient(90deg, var(--teal-500), var(--teal-700));
+  background: linear-gradient(90deg, var(--indigo-500), var(--indigo-700));
   border-radius: 999px;
   transition: width 0.3s ease;
 }

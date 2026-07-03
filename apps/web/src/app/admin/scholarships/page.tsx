@@ -204,7 +204,7 @@ export default function AdminScholarshipsPage() {
             onClick={ingestAll}
             disabled={ingestingAll}
             title="Generate AI embeddings for all published scholarships (required for AI Match)"
-            style={{ background: "var(--teal-600, #0d9488)", color: "#fff", border: "none", cursor: ingestingAll ? "wait" : "pointer" }}
+            style={{ background: "var(--indigo-600, #4f46e5)", color: "#fff", border: "none", cursor: ingestingAll ? "wait" : "pointer" }}
           >
             {ingestingAll ? "Ingesting…" : "⚡ Ingest All"}
           </button>
@@ -218,7 +218,7 @@ export default function AdminScholarshipsPage() {
       </header>
 
       {ingestStatus && (
-        <p style={{ margin: "0 0 16px", fontSize: "13px", padding: "10px 14px", background: "var(--sand-100, #f5f4f0)", borderRadius: "8px", border: "1px solid var(--sand-200, #e8e5dc)" }}>
+        <p style={{ margin: "0 0 16px", fontSize: "13px", padding: "10px 14px", background: "var(--warm-100, #fff7ed)", borderRadius: "8px", border: "1px solid var(--warm-200, #fed7aa)" }}>
           {ingestStatus}
         </p>
       )}
@@ -365,7 +365,7 @@ export default function AdminScholarshipsPage() {
                 href={telegramModal.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "var(--teal-700, #0a6b6a)", textDecoration: "underline", wordBreak: "break-all" }}
+                style={{ color: "var(--indigo-700, #3730a3)", textDecoration: "underline", wordBreak: "break-all" }}
               >
                 {telegramModal.url}
               </a>

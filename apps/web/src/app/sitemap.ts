@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { sql } from "@/utils/db";
 import { fetchPublishedDbGuides } from "@/lib/guides-db";
 
-const BASE_URL = "https://baireporbo.app";
+const BASE_URL = "https://probashacademic.app";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Static pages

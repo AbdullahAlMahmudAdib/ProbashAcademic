@@ -4,7 +4,7 @@ import { requireAdmin } from "@/utils/api-auth";
 import { checkRateLimit, getClientIp, logRequest } from "@/lib/nim";
 import { fetchCompletion, type ModelChoice } from "@/lib/ai-completion";
 
-const BASE_URL = "https://baireporbo.app";
+const BASE_URL = "https://probashacademic.app";
 
 const VALID_MODELS: ModelChoice[] = ["nim", "kimi", "deepseek", "mistral"];
 

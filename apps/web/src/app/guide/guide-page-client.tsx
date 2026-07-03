@@ -6,10 +6,10 @@ import type { Guide } from "./data/types";
 import styles from "./page.module.css";
 
 const CATEGORY_COLORS: Record<string, string> = {
-  Scholarships: "teal",
+  Scholarships: "indigo",
   Applications: "coral",
   Tests: "sky",
-  Destinations: "sand",
+  Destinations: "warm",
   Visa: "purple",
 };
 
@@ -60,7 +60,7 @@ export default function GuidePageClient({ guides }: { guides: Guide[] }) {
       <section className={styles.gridSection} aria-label="All guides">
         <div className={styles.grid}>
           {guides.map((guide) => {
-            const colorKey = CATEGORY_COLORS[guide.category] ?? "teal";
+            const colorKey = CATEGORY_COLORS[guide.category] ?? "indigo";
             return (
               <Link
                 key={guide.slug}

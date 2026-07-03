@@ -7,6 +7,7 @@ import { useAuth } from "@/lib/auth";
 import { useT, useLang } from "@/lib/lang-context";
 import AppNavbar, { NavAction } from "@/components/layout/app-navbar";
 import SharedFooter from "@/components/layout/shared-footer";
+import ThreeHero from "@/components/hero-canvas/three-hero";
 import type { Guide } from "./guide/data/types";
 import styles from "./page.module.css";
 
@@ -117,7 +118,7 @@ export default function HomeClient() {
   };
 
   const getUrgencyColor = (deadline: string | null): string => {
-    if (!deadline) return "var(--teal-500)";
+    if (!deadline) return "var(--indigo-500)";
     const days = Math.ceil((new Date(deadline).getTime() - Date.now()) / (24 * 60 * 60 * 1000));
     if (days <= 7) return "#e63946";
     if (days <= 14) return "#f4a261";
@@ -151,6 +152,7 @@ export default function HomeClient() {
       <main className={styles.main}>
         {/* ── Hero ── */}
         <section className={styles.hero}>
+          <ThreeHero />
           <div className={styles.heroLeft}>
             <p className={styles.kicker}>{t("home.kicker")}</p>
             <h1>{t("home.heroTitle")}</h1>
@@ -429,7 +431,7 @@ function AndroidBanner() {
       </div>
       <div className={styles.androidBannerActions}>
         <a
-          href="/BairePorbo.apk"
+          href="/ProbashAcademic.apk"
           className={styles.androidBannerInstall}
           download
         >
@@ -467,7 +469,7 @@ function ProductPreview() {
           </div>
           <div className={styles.previewStatus}>
             <span className={styles.previewLiveDot} />
-            BairePorbo Mentor · Online
+            ProbashAcademic Mentor · Online
           </div>
         </div>
 

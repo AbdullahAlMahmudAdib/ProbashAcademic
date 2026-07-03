@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const guide = await fetchPublishedGuideBySlug(slug);
   if (!guide) return {};
 
-  const BASE = "https://baireporbo.app";
+  const BASE = "https://probashacademic.app";
   const url = `${BASE}/guide/${guide.slug}`;
 
   return {
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: guide.description,
     alternates: { canonical: url },
     openGraph: {
-      title: `${guide.title} | BairePorbo`,
+      title: `${guide.title} | ProbashAcademic`,
       description: guide.description,
       url,
       type: "article",
@@ -80,16 +80,16 @@ export default async function GuideDetailPage({ params }: Props) {
     dateModified: guide.updatedAt,
     author: {
       "@type": "Organization",
-      name: "BairePorbo",
-      url: "https://baireporbo.app",
+      name: "ProbashAcademic",
+      url: "https://probashacademic.app",
     },
     publisher: {
       "@type": "Organization",
-      name: "BairePorbo",
-      url: "https://baireporbo.app",
+      name: "ProbashAcademic",
+      url: "https://probashacademic.app",
     },
     keywords: guide.tags.join(", "),
-    url: `https://baireporbo.app/guide/${guide.slug}`,
+    url: `https://probashacademic.app/guide/${guide.slug}`,
   };
 
   /* ── Breadcrumb Schema ── */
@@ -97,9 +97,9 @@ export default async function GuideDetailPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://baireporbo.app" },
-      { "@type": "ListItem", position: 2, name: "Guide", item: "https://baireporbo.app/guide" },
-      { "@type": "ListItem", position: 3, name: guide.title, item: `https://baireporbo.app/guide/${guide.slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://probashacademic.app" },
+      { "@type": "ListItem", position: 2, name: "Guide", item: "https://probashacademic.app/guide" },
+      { "@type": "ListItem", position: 3, name: guide.title, item: `https://probashacademic.app/guide/${guide.slug}` },
     ],
   };
 

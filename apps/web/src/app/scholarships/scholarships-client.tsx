@@ -8,6 +8,7 @@ import { useAuth } from "@/lib/auth";
 import { useT, useLang } from "@/lib/lang-context";
 import type { TranslationKey } from "@/lib/translations";
 import AppNavbar, { NavAction } from "@/components/layout/app-navbar";
+import ThreeHeroLight from "@/components/hero-canvas/three-hero-light";
 import styles from "./scholarships.module.css";
 
 const POPUP_STORAGE_KEY = "bp_telegram_popup_v2";
@@ -73,7 +74,7 @@ function TelegramPopup() {
         <div className={styles.popupImageWrap}>
           <Image
             src="/tgad.png"
-            alt="BairePortbo Telegram Scholarship Updates"
+            alt="ProbashAcademic Telegram Scholarship Updates"
             width={800}
             height={800}
             className={styles.popupImage}
@@ -88,7 +89,7 @@ function TelegramPopup() {
               : "সব স্কলারশিপ এর নিয়মিত আপডেট পেতে জয়েন করুন"}
           </p>
           <a
-            href="https://t.me/baireporbo"
+            href="https://t.me/probashacademic"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.popupTelegramBtn}
@@ -613,6 +614,9 @@ function ScholarshipsContent() {
 
       <main className={styles.main}>
         <section className={styles.hero}>
+          <div className={styles.heroCanvas}>
+            <ThreeHeroLight />
+          </div>
           <div>
             <p className={styles.kicker}>{t("scholarships.kicker")}</p>
             <h1 className={styles.heroTitle}>

@@ -48,7 +48,7 @@ export const resolveShortlink = async (url: string): Promise<ResolveResult> => {
       signal: controller.signal,
       redirect: "follow",
       headers: {
-        "User-Agent": "Mozilla/5.0 (compatible; BairePorboBot/1.0; +https://baireporbo.app)",
+        "User-Agent": "Mozilla/5.0 (compatible; ProbashAcademicBot/1.0; +https://probashacademic.app)",
         Accept: "text/html,application/xhtml+xml",
       },
     });

@@ -1,6 +1,6 @@
 {
-  "name": "BairePorbo",
-  "short_name": "BairePorbo",
+  "name": "ProbashAcademic",
+  "short_name": "ProbashAcademic",
   "description": "AI-powered scholarship guidance for Bangladeshi students",
   "start_url": "/",
   "display": "standalone",
@@ -35,7 +35,7 @@
       "sizes": "1200x630",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "BairePorbo scholarship search"
+      "label": "ProbashAcademic scholarship search"
     }
   ],
   "categories": ["education"],

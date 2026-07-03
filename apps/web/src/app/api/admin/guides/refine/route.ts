@@ -6,7 +6,7 @@ import { fetchCompletion, parseJsonFromCompletion, type ModelChoice } from "@/li
 
 const VALID_MODELS: ModelChoice[] = ["nim", "kimi", "deepseek", "mistral"];
 
-const GUIDE_REFINE_SYSTEM = `You are an expert content editor for BairePorbo, a study-abroad guidance platform for Bangladeshi students.
+const GUIDE_REFINE_SYSTEM = `You are an expert content editor for ProbashAcademic, a study-abroad guidance platform for Bangladeshi students.
 
 The admin will give you a rough draft — notes, bullet points, or prose — about a higher study topic (scholarships, IELTS, SOP, visa, specific countries, etc.).
 

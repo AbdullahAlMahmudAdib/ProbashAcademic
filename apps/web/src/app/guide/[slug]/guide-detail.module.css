@@ -25,12 +25,12 @@
 }
 
 .breadcrumb a {
-  color: var(--teal-500);
+  color: var(--indigo-500);
   transition: color 0.15s;
 }
 
 .breadcrumb a:hover {
-  color: var(--teal-700);
+  color: var(--indigo-700);
 }
 
 /* ── Layout: article + sidebar ── */
@@ -64,8 +64,8 @@
   text-transform: uppercase;
   padding: 0.25rem 0.65rem;
   border-radius: 100px;
-  background: #e0f5f4;
-  color: #0a6d6b;
+  background: #eef2ff;
+  color: #3730a3;
 }
 
 .updateDate {
@@ -81,8 +81,8 @@
   gap: 0.5rem 0.75rem;
   margin-top: 1rem;
   padding: 0.75rem 1rem;
-  background: var(--sand-50, #faf9f7);
-  border: 1px solid var(--sand-200, #e8e3db);
+  background: var(--warm-50, #fefbf6);
+  border: 1px solid var(--warm-200, #fed7aa);
   border-radius: 10px;
   font-size: 0.8125rem;
 }
@@ -123,8 +123,8 @@
   line-height: 1.75;
   margin-bottom: 1.25rem;
   padding: 1rem;
-  background: rgba(15, 143, 141, 0.04);
-  border: 1px solid rgba(15, 143, 141, 0.12);
+  background: rgba(99, 102, 241, 0.04);
+  border: 1px solid rgba(99, 102, 241, 0.12);
   border-radius: var(--radius-md);
 }
 
@@ -136,7 +136,7 @@
 
 .tag {
   font-size: 0.7rem;
-  background: var(--sand-100);
+  background: var(--warm-100);
   color: var(--ink-500);
   padding: 0.2rem 0.6rem;
   border-radius: 100px;
@@ -147,7 +147,7 @@
   margin-bottom: 2rem;
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
   box-shadow: 0 4px 20px rgba(15, 34, 52, 0.07);
 }
 
@@ -163,7 +163,7 @@
 .articleBody {
   margin-bottom: 3rem;
   padding-bottom: 2.5rem;
-  border-bottom: 1.5px solid var(--sand-200);
+  border-bottom: 1.5px solid var(--warm-200);
 }
 
 .articleBody h2 {
@@ -173,7 +173,7 @@
   color: var(--ink-900);
   margin: 2rem 0 0.75rem;
   padding-bottom: 0.3rem;
-  border-bottom: 2px solid #e0f5f4;
+  border-bottom: 2px solid #eef2ff;
 }
 
 .articleBody h3 {
@@ -209,13 +209,13 @@
 }
 
 .articleBody a {
-  color: var(--teal-500);
+  color: var(--indigo-500);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .articleBody a:hover {
-  color: var(--teal-700);
+  color: var(--indigo-700);
 }
 
 /* ── FAQ section heading ── */
@@ -247,19 +247,19 @@
 
 .accordionItem {
   background: #fff;
-  border: 1.5px solid var(--sand-200);
+  border: 1.5px solid var(--warm-200);
   border-radius: 12px;
   overflow: hidden;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .accordionItem:hover {
-  border-color: rgba(15, 143, 141, 0.3);
+  border-color: rgba(99, 102, 241, 0.3);
 }
 
 .accordionItemOpen {
-  border-color: rgba(15, 143, 141, 0.45);
-  box-shadow: 0 4px 20px rgba(15, 143, 141, 0.08);
+  border-color: rgba(99, 102, 241, 0.45);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.08);
 }
 
 .accordionTrigger {
@@ -278,11 +278,11 @@
 }
 
 .accordionTrigger:hover {
-  background: var(--sand-100);
+  background: var(--warm-100);
 }
 
 .accordionItemOpen .accordionTrigger {
-  background: rgba(15, 143, 141, 0.04);
+  background: rgba(99, 102, 241, 0.04);
 }
 
 .accordionQ {
@@ -295,7 +295,7 @@
 .accordionIcon {
   font-size: 1.25rem;
   font-weight: 400;
-  color: var(--teal-500);
+  color: var(--indigo-500);
   flex-shrink: 0;
   line-height: 1;
   margin-top: 2px;
@@ -331,9 +331,9 @@
   align-items: center;
   gap: 1rem;
   padding: 1.25rem 1.5rem;
-  background: var(--sand-100);
+  background: var(--warm-100);
   border-radius: 12px;
-  border: 1px solid var(--sand-200);
+  border: 1px solid var(--warm-200);
   flex-wrap: wrap;
 }
 
@@ -346,13 +346,13 @@
 .mentorLink {
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--teal-500);
+  color: var(--indigo-500);
   white-space: nowrap;
   transition: color 0.15s;
 }
 
 .mentorLink:hover {
-  color: var(--teal-700);
+  color: var(--indigo-700);
 }
 
 /* ── Sidebar ── */
@@ -369,7 +369,7 @@
 .relatedCard,
 .scholarshipsCard {
   background: #fff;
-  border: 1.5px solid var(--sand-200);
+  border: 1.5px solid var(--warm-200);
   border-radius: 14px;
   padding: 1.25rem;
 }
@@ -404,12 +404,12 @@
 }
 
 .tocLink:hover {
-  color: var(--teal-500);
+  color: var(--indigo-500);
 }
 
 /* Mentor card */
 .sidebarMentorCard {
-  background: linear-gradient(135deg, #0a4a48, #0f8f8d);
+  background: linear-gradient(135deg, #0a4a48, #6366f1);
   border-color: transparent;
 }
 
@@ -462,7 +462,7 @@
   color: var(--ink-700);
   line-height: 1.45;
   padding: 0.35rem 0;
-  border-bottom: 1px solid var(--sand-100);
+  border-bottom: 1px solid var(--warm-100);
   transition: color 0.15s;
 }
 
@@ -471,12 +471,12 @@
 }
 
 .relatedLink:hover {
-  color: var(--teal-500);
+  color: var(--indigo-500);
 }
 
 .relatedArrow {
   flex-shrink: 0;
-  color: var(--teal-500);
+  color: var(--indigo-500);
 }
 
 /* Scholarships CTA */
@@ -490,12 +490,12 @@
 .scholarshipsLink {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--teal-500);
+  color: var(--indigo-500);
   transition: color 0.15s;
 }
 
 .scholarshipsLink:hover {
-  color: var(--teal-700);
+  color: var(--indigo-700);
 }
 
 /* ── Responsive ── */

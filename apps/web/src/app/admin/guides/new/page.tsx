@@ -298,8 +298,8 @@ export default function NewGuidePage() {
                   flex: 1,
                   padding: "14px 16px",
                   borderRadius: 12,
-                  border: `2px solid ${entryMode === "ai" ? "var(--teal-500, #0f8f8d)" : "var(--sand-200, #e8e3db)"}`,
-                  background: entryMode === "ai" ? "var(--teal-50, #f0fafa)" : "#fff",
+                  border: `2px solid ${entryMode === "ai" ? "var(--indigo-500, #6366f1)" : "var(--warm-200, #fed7aa)"}`,
+                  background: entryMode === "ai" ? "var(--indigo-50, #f0fafa)" : "#fff",
                   cursor: "pointer",
                   textAlign: "left",
                   fontFamily: "inherit",
@@ -319,8 +319,8 @@ export default function NewGuidePage() {
                   flex: 1,
                   padding: "14px 16px",
                   borderRadius: 12,
-                  border: `2px solid ${entryMode === "manual" ? "var(--teal-500, #0f8f8d)" : "var(--sand-200, #e8e3db)"}`,
-                  background: entryMode === "manual" ? "var(--teal-50, #f0fafa)" : "#fff",
+                  border: `2px solid ${entryMode === "manual" ? "var(--indigo-500, #6366f1)" : "var(--warm-200, #fed7aa)"}`,
+                  background: entryMode === "manual" ? "var(--indigo-50, #f0fafa)" : "#fff",
                   cursor: "pointer",
                   textAlign: "left",
                   fontFamily: "inherit",
@@ -527,7 +527,7 @@ export default function NewGuidePage() {
               <div className={styles.field} style={{ gridColumn: "1 / -1" }}>
                 <label>
                   Thumbnail / Cover image{" "}
-                  <span style={{ fontWeight: 600, color: "var(--teal-600, #0a7070)" }}>
+                  <span style={{ fontWeight: 600, color: "var(--indigo-600, #0a7070)" }}>
                     (required — shown on guide cards &amp; detail page)
                   </span>
                 </label>
@@ -555,8 +555,8 @@ export default function NewGuidePage() {
                     marginTop: 12,
                     padding: 14,
                     borderRadius: 12,
-                    border: "1px dashed var(--sand-200, #e8e3db)",
-                    background: "var(--sand-50, #faf8f5)",
+                    border: "1px dashed var(--warm-200, #fed7aa)",
+                    background: "var(--warm-50, #faf8f5)",
                   }}
                 >
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
@@ -603,7 +603,7 @@ export default function NewGuidePage() {
                           lineHeight: 1.5,
                           padding: 10,
                           borderRadius: 8,
-                          border: "1px solid var(--sand-200, #e8e3db)",
+                          border: "1px solid var(--warm-200, #fed7aa)",
                           background: "#fff",
                           fontFamily: "inherit",
                         }}
@@ -677,7 +677,7 @@ export default function NewGuidePage() {
                 <div
                   key={i}
                   style={{
-                    border: "1px solid var(--sand-200)",
+                    border: "1px solid var(--warm-200)",
                     borderRadius: 12,
                     overflow: "hidden",
                   }}
@@ -687,7 +687,7 @@ export default function NewGuidePage() {
                     style={{
                       width: "100%",
                       padding: "12px 16px",
-                      background: editingFaq === i ? "var(--sand-100)" : "#fafafa",
+                      background: editingFaq === i ? "var(--warm-100)" : "#fafafa",
                       border: "none",
                       textAlign: "left",
                       cursor: "pointer",
@@ -702,7 +702,7 @@ export default function NewGuidePage() {
                     <span style={{ fontSize: 13, fontWeight: 600, flex: 1 }}>
                       {faq.question || <em style={{ color: "var(--ink-500)", fontStyle: "normal" }}>New question…</em>}
                     </span>
-                    <span style={{ fontSize: 18, color: "var(--teal-500)", flexShrink: 0 }}>
+                    <span style={{ fontSize: 18, color: "var(--indigo-500)", flexShrink: 0 }}>
                       {editingFaq === i ? "−" : "+"}
                     </span>
                   </button>

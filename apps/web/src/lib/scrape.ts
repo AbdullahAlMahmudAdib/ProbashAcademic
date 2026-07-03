@@ -67,7 +67,7 @@ export const scrapeUrl = async (url: string, timeoutMs: number = DEFAULT_FETCH_T
       headers: {
         // Pretend to be a normal browser; some sites block default fetch UA
         "User-Agent":
-          "Mozilla/5.0 (compatible; BairePorboBot/1.0; +https://baireporbo.app)",
+          "Mozilla/5.0 (compatible; ProbashAcademicBot/1.0; +https://probashacademic.app)",
         Accept: "text/html,application/xhtml+xml",
       },
     });

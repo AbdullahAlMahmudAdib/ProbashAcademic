@@ -66,8 +66,8 @@ function LoginForm() {
     <div className={styles.page}>
       <div className={styles.card}>
         <div className={styles.logo}>
-          <Image src="/logo.png" alt="BairePorbo Logo" width={28} height={28} className={styles.logoImage} />
-          <span className={styles.logoText}>BairePorbo</span>
+          <Image src="/logo.png" alt="ProbashAcademic Logo" width={28} height={28} className={styles.logoImage} />
+          <span className={styles.logoText}>ProbashAcademic</span>
         </div>
         <h1 className={styles.heading}>{t("login.heading")}</h1>
         <p className={styles.sub}>{t("login.sub")}</p>
@@ -100,7 +100,7 @@ function LoginForm() {
           <div className={styles.field}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
               <label htmlFor="password">{t("login.password")}</label>
-              <Link href="/auth/forgot-password" style={{ fontSize: "0.8rem", color: "var(--teal-600)" }}>
+              <Link href="/auth/forgot-password" style={{ fontSize: "0.8rem", color: "var(--indigo-600)" }}>
                 Forgot password?
               </Link>
             </div>
